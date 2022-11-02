@@ -1,26 +1,41 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+  .btn-primary {
+    @apply p-4 drop-shadow-2xl text-2xl duration-500  z-[1] md:hover:translate-x-1
   }
-  body {
-    color: white;
-    background: black;
+  .btn-primary__after{
+    @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1 after:border-r   after:border-b after:border-gray-600   md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-500 after:z-[-1] after:animate-pulse;
+  }
+  .btn-primary__before {
+    @apply before:absolute before:h-full before:w-full before:left-2 before:top-1 before:border-t before:border-l before:border-gray-600   md:before:translate-x-0 md:before:translate-y-0  md:hover:before:-translate-x-4 md:hover:before:-translate-y-4 before:duration-500  before:z-[-1] before:animate-pulse;
+  }
+  .title-big {
+    @apply text-5xl sm:text-8xl md:text-9xl
+  }
+  /*    .interactive-title {
+          @apply
+      }*/
+  .interactive-title__before {
+    @apply relative overflow-hidden before:absolute before:w-full before:h-full before:top-0 before:left-0 before:translate-y-[100%] hover:before:translate-y-0  before:duration-500 before:z-[-1] before:bg-gray-500 before:skew-y-12 before:rotate-[15deg] hover:before:rotate-0 before:origin-left
+  }
+  .section-container {
+    @apply px-4 md:px-[10%]
+  }
+  .section-indicator {
+    @apply uppercase
+  }
+  .section {
+    @apply pb-16
+  }
+  body{
+    @apply bg-neutral-300
+  }
+  *, :before, :after {
+
   }
 }
+
