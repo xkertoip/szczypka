@@ -9,7 +9,7 @@ export default function Hero() {
       <div
         className={'section-container relative min-h-screen overflow-hidden '}
       >
-        <h2 className={'section-indicator pt-4'}>Hello,</h2>
+        <h2 className={'section-indicator pt-4'}>Hello</h2>
         <div className={'flex rotate-[-15deg] gap-4 justify-center'}>
           <AnimatedImage />
           <SocialMedia />
@@ -26,10 +26,10 @@ export default function Hero() {
             <div className={'sm:order-1 max-w-[350px] space-y-8'}>
               <Description />
               <div className={'flex justify-end gap-12 items-center '}>
-                <Link href={'/contact'} className={'drop-shadow-3xl underline'}>
+                <Link href={'/contact'} className={'link-primary'}>
                   Hire me
                 </Link>
-                <button className={'btn-primary'}>
+                <button className={'btn-primary btn-primary__before'}>
                   <a href={'#about'}>Portfolio</a>
                 </button>
               </div>

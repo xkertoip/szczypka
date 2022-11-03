@@ -5,7 +5,19 @@
 
 @layer components {
   .btn-primary {
-    @apply p-4 drop-shadow-3xl text-2xl duration-500  z-[1] md:hover:translate-x-1 border-t border-indigo-400 bg-zinc-900
+    @apply p-4 drop-shadow-3xl text-2xl z-[1] border-t border-indigo-400 bg-zinc-800 hover:translate-x-2 overflow-hidden duration-700
+  }
+  .btn-primary__before {
+    @apply before:h-px before:absolute before:w-full before:top-0 before:left-0 before:-translate-x-[100%] hover:before:translate-x-0 before:duration-700 before:bg-red-400
+  }
+  .link-primary {
+    @apply hover:drop-shadow-4xl hover:translate-x-2 duration-700 before:w-full before:-translate-x-[100%] overflow-hidden relative before:absolute before:h-px hover:before:translate-x-0 before:bottom-0 before:left-0 before:bg-red-400 before:duration-700
+  }
+  .letter-animate__odd {
+    @apply hover:text-red-400 duration-700 inline-block hover:animate-letterWiggle
+  }
+  .letter-animate__even {
+    @apply hover:text-indigo-400 duration-700 inline-block hover:animate-letterWiggle
   }
  /* .btn-primary__after{
     @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1  md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-700 after:z-[-1] after:animate-pulse;
@@ -32,7 +44,7 @@
     @apply pb-16
   }
   body{
-    @apply bg-zinc-900
+    @apply bg-zinc-800
   }
   *, :before, :after {
     @apply text-zinc-300

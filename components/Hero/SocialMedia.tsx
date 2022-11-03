@@ -6,28 +6,43 @@ import instagram from '/public/images/instagram.png';
 
 export default function SocialMedia() {
   return (
-    <div className={' flex flex-col justify-center gap-2'}>
-      <Link
-        href={'https://github.com/xkertoip'}
-        className={'flex gap-4 items-center'}
-      >
+    <ul className={'my-auto space-y-4'}>
+      <li className={'flex gap-4 items-center text-xl'}>
         <Image src={github} alt={'github'} priority />
-        Github
-      </Link>
-      <Link
-        href={'https://www.instagram.com/xkertoip/'}
-        className={'flex gap-4 items-center'}
-      >
-        <Image src={instagram} alt={'instagram'} priority />
-        Instagram
-      </Link>
-      <Link
-        href={'https://www.facebook.com/piotrek.szczypka/'}
-        className={'flex gap-4 items-center'}
-      >
-        <Image src={facebook} alt={'facebook'} priority />
-        Facebook
-      </Link>
-    </div>
+        <Link
+          href={'https://github.com/xkertoip'}
+          className={
+            'relative hover:text-neutral-500 hover:before:text-red-400 duration-700 hover:before:-translate-y-2 before:-translate-x-1 before:duration-700 before:content-["Github"] before:absolute before:left-0 before:opacity-0 hover:before:opacity-100'
+          }
+          target={'_blank'}
+        >
+          Github
+        </Link>
+      </li>
+      <li className={'flex gap-4 items-center text-xl'}>
+        <Image src={instagram} alt={'github'} priority />
+        <Link
+          href={'https://www.instagram.com/xkertoip/'}
+          className={
+            ' relative hover:text-neutral-500 hover:before:text-red-400 duration-700 hover:before:-translate-y-2 before:-translate-x-1 before:duration-700 before:content-["Instagram"] before:absolute before:left-0 before:opacity-0 hover:before:opacity-100'
+          }
+          target={'_blank'}
+        >
+          Instagram
+        </Link>
+      </li>
+      <li className={'flex gap-4 items-center text-xl '}>
+        <Image src={facebook} alt={'github'} priority />
+        <Link
+          href={'https://www.facebook.com/piotrek.szczypka/'}
+          className={
+            ' relative hover:text-neutral-500 hover:before:text-red-400 duration-700 hover:before:-translate-y-2 before:-translate-x-1 before:duration-700 before:content-["Facebook"] before:absolute before:left-0 before:opacity-0 hover:before:opacity-100'
+          }
+          target={'_blank'}
+        >
+          Facebook
+        </Link>
+      </li>
+    </ul>
   );
 }

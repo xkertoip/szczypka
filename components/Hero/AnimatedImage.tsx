@@ -16,9 +16,8 @@ export default function AnimatedImage() {
         <Image
           src={hero2}
           alt={'Piotr Szczypka'}
-          sizes="(max-width: 768px) 60vw,
-                          (max-width: 1200px) 50vw,
-                          33vw"
+          sizes="(max-width: 768px) 150px,
+                          250px"
           priority
           className={'animate-move'}
         />
