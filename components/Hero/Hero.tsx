@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import hero2 from '/public/images/me2_retusz.png';
-import { ImFacebook } from 'react-icons/Im';
-import { AiFillGithub } from 'react-icons/Ai';
-import { AiFillInstagram } from 'react-icons/Ai';
 import Link from 'next/link';
+import facebook from '/public/images/facebook.png';
+import github from '/public/images/github.png';
+import instagram from '/public/images/instagram.png';
 
 import FancyButton from '../FancyButton';
 const Hero = () => {
@@ -16,12 +16,12 @@ const Hero = () => {
             <div className={'max-w-[60vw] relative m-auto'}>
               <div
                 className={
-                  'before:absolute before:drop-shadow-2xl before:w-full before:h-[85%] before:bg-indigo-700 before:bottom-0 before:rounded-3xl before:-rotate-[45deg] before:origin-center  before:animate-wiggleBg'
+                  'before:absolute before:drop-shadow-2xl before:w-full before:h-[85%] before:bg-rose-900 before:bottom-0 before:rounded-3xl before:-rotate-[45deg] before:origin-center  before:animate-wiggleBg'
                 }
               >
                 <div
                   className={
-                    'rounded-3xl drop-shadow-2xl rotate-[-15deg] origin-center m-auto  relative  overflow-hidden  before:absolute before:w-full before:h-[85%] before:bg-zinc-600 before:bottom-0 before:rounded-3xl animate-wiggle '
+                    'rounded-3xl drop-shadow-2xl rotate-[-15deg] origin-center m-auto  relative  overflow-hidden  before:absolute before:w-full before:h-[85%] before:bg-zinc-900 before:bottom-0 before:rounded-3xl animate-wiggle before:border before:border-rose-900'
                   }
                 >
                   <div className={'animate-move'}>
@@ -38,31 +38,49 @@ const Hero = () => {
               </div>
             </div>
             <div className={'relative  translate-y-[-4rem] flex gap-4'}>
-              <div className={' flex flex-col justify-center gap-2'}>
+              <div className={' flex flex-col justify-start gap-2'}>
                 <Link
                   href={'https://github.com/xkertoip'}
                   className={'flex gap-4 items-center'}
                 >
-                  <AiFillGithub size={24} />
+                  <Image
+                    src={github}
+                    alt={'github'}
+                    priority
+                    width={24}
+                    height={24}
+                  />
                   Github
                 </Link>
                 <Link
                   href={'https://www.instagram.com/xkertoip/'}
                   className={'flex gap-4 items-center'}
                 >
-                  <AiFillInstagram size={24} />
-                  Insta
+                  <Image
+                    src={instagram}
+                    alt={'instagram'}
+                    priority
+                    width={24}
+                    height={24}
+                  />
+                  Instagram
                 </Link>
                 <Link
                   href={'https://www.facebook.com/piotrek.szczypka/'}
                   className={'flex gap-4 items-center'}
                 >
-                  <ImFacebook size={24} />
+                  <Image
+                    src={facebook}
+                    alt={'facebook'}
+                    priority
+                    width={24}
+                    height={24}
+                  />
                   Facebook
                 </Link>
               </div>
               <h1 className={'title-big text-right drop-shadow-xl'}>
-                <span className={'text-zinc-600 text-[8rem]'}>P</span>
+                <span className={'text-rose-900 text-[8rem]'}>P</span>
                 <span className={'relative -left-8'}>iotr</span>
                 <br /> Szczypka
               </h1>
@@ -74,7 +92,7 @@ const Hero = () => {
               <span className={'underline capitalize'}>react</span> /{' '}
               <span className={'underline capitalize'}>creative</span>{' '}
               Developer, you name it. Lucky owner of 4 legs beast called Bobik.{' '}
-              <Link href={'/about'} className={'underline animate-pulse'}>
+              <Link href={'/about'} className={'underline  text-rose-900'}>
                 Let&apos;s meet
               </Link>
               !
@@ -85,7 +103,7 @@ const Hero = () => {
               </FancyButton>
               <Link
                 href={'/contact'}
-                className={'underline animate-pulse text-xl'}
+                className={'underline animate-pulse text-xl text-rose-900'}
               >
                 Hire me
               </Link>
