@@ -7,9 +7,11 @@ export default function Hero() {
   return (
     <>
       <div
-        className={'section-container relative min-h-screen overflow-hidden '}
+        className={
+          'section-container relative min-h-screen grid overflow-hidden '
+        }
       >
-        <h2 className={'section-indicator pt-4'}>Hello</h2>
+        <h3 className={'section-indicator pt-4'}>Hello</h3>
         <div className={'flex rotate-[-15deg] gap-4 justify-center'}>
           <AnimatedImage />
           <SocialMedia />

@@ -3,16 +3,8 @@ import hero2 from '/public/images/me2_retusz.png';
 
 export default function AnimatedImage() {
   return (
-    <div
-      className={
-        'max-w-[150px] sm:max-w-[250px] z-[-1] relative before:absolute before:drop-shadow-3xl before:w-full before:h-[85%] before:bg-indigo-400 before:bottom-0 before:rounded-3xl before:-rotate-[15deg] before:origin-center  before:animate-wiggleBg'
-      }
-    >
-      <div
-        className={
-          'rounded-3xl drop-shadow-3xl origin-center m-auto  relative  overflow-hidden  before:absolute before:w-full before:h-[85%] before:bg-red-400 before:bottom-0 before:rounded-3xl before:border before:border-indigo-400 before:z-[-1]'
-        }
-      >
+    <div className={'max-w-[150px] sm:max-w-[250px] main--image__card'}>
+      <div className={' m-auto main--image__background  '}>
         <Image
           src={hero2}
           alt={'Piotr Szczypka'}

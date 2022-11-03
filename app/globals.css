@@ -19,6 +19,18 @@
   .letter-animate__even {
     @apply hover:text-indigo-400 duration-700 inline-block hover:animate-letterWiggle
   }
+  .section--image__card {
+    @apply relative before:absolute before:drop-shadow-3xl before:w-full before:h-[85%] before:bg-indigo-400 before:bottom-0 before:rounded-3xl before:-rotate-[15deg] before:origin-center  before:animate-wiggleBg h-fit  z-[-1]
+  }
+  .main--image__card {
+    @apply relative before:absolute before:drop-shadow-3xl before:w-full before:h-[85%] before:bg-indigo-400 before:bottom-0 before:rounded-3xl before:-rotate-[15deg] before:origin-center  before:animate-wiggleBg h-fit  z-[-1]
+  }
+  .main--image__background {
+    @apply relative  overflow-hidden  before:absolute before:w-full before:h-[85%] before:bg-red-400 before:bottom-0 before:rounded-3xl before:border before:border-indigo-400 before:z-[-1] rounded-3xl drop-shadow-3xl
+  }
+  .section--image__background {
+    @apply relative  overflow-hidden rounded-3xl rounded-3xl drop-shadow-3xl w-fit
+  }
  /* .btn-primary__after{
     @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1  md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-700 after:z-[-1] after:animate-pulse;
   }
@@ -27,6 +39,9 @@
   }*/
   .title-big {
     @apply text-6xl sm:text-7xl md:text-8xl
+  }
+  .section-title {
+    @apply text-4xl sm:text-6xl text-indigo-400
   }
   /*    .interactive-title {
           @apply
