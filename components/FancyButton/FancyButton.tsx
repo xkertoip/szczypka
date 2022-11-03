@@ -6,7 +6,7 @@ const FancyButton: FunctionComponent<
   <button
     onClick={onClick}
     type={type}
-    className={'btn-primary btn-primary__after btn-primary__before capitalize'}
+    className={'btn-primary capitalize'}
     role={role}
     name={name}
   >
