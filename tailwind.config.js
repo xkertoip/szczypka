@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      dropShadow: {
+        '3xl': '0 5px 5px rgba(129, 140, 248, 0.4)'
+      },
       keyframes: {
         move: {
           '0%, 100%': {
