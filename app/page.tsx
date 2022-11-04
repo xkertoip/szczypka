@@ -4,10 +4,14 @@ import Introduce from '../components/Introduce';
 export default function Home() {
   return (
     <main>
-      <section>
+      <section
+        className={
+          'section-container relative min-h-screen grid overflow-hidden '
+        }
+      >
         <Hero />
       </section>
-      <section>
+      <section className={'section-container relative overflow-hidden pb-16'}>
         <Introduce />
       </section>
     </main>
