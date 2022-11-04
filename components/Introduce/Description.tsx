@@ -9,7 +9,11 @@ export default function Description() {
         writing code, pick up bag and take a journey to Polish mountain.
       </p>
       <p>You will find my resume attached below.</p>
-      <button className={'btn-primary btn-primary__before flex ml-auto'}>
+      <button
+        className={
+          'btn-primary btn-primary__before flex ml-auto btn-primary__after'
+        }
+      >
         <a href={'#about'}>Resume</a>
       </button>
     </>

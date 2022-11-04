@@ -26,7 +26,9 @@ export default function Hero() {
               <Link href={'/contact'} className={'link-primary'}>
                 Hire me
               </Link>
-              <button className={'btn-primary btn-primary__before'}>
+              <button
+                className={'btn-primary btn-primary__before btn-primary__after'}
+              >
                 <a href={'#about'}>Portfolio</a>
               </button>
             </div>

@@ -1,4 +1,40 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+const rotateX = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.rotate-y-180': {
+      transform: 'rotateY(180deg)'
+    },
+    '.rotate-x-180': {
+      transform: 'rotateX(180deg)'
+    }
+  });
+});
+
+const backfaceVisibility = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.backface-visible': {
+      'backface-visibility': 'visible'
+    },
+    '.backface-hidden': {
+      'backface-visibility': 'hidden'
+    }
+  });
+});
+const perspective = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.perspective-3d': {
+      perspective: '600px'
+    }
+  });
+});
+const transformStyle = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.transform-preserve': {
+      'transform-style': 'preserve-3d'
+    }
+  });
+});
 
 module.exports = {
   content: [
@@ -9,8 +45,8 @@ module.exports = {
   theme: {
     extend: {
       dropShadow: {
-        '3xl': '5px 7px 15px rgba(24, 24, 27, 0.5)',
-        '4xl': '5px 7px 15px rgba(129, 140, 248, 0.4)'
+        '3xl': '5px 7px 7px rgba(24, 24, 27, 0.5)',
+        '4xl': '5px 7px 7px rgba(129, 140, 248, 0.4)'
       },
       keyframes: {
         move: {
@@ -69,5 +105,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [perspective, backfaceVisibility, transformStyle, rotateX]
 };

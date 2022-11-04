@@ -1,8 +1,8 @@
 import Title from './Title';
 import Card from './Card';
-import holding from '/public/images/holding1.png';
-import amnis from '/public/images/amniscode.png';
-import szczypka from '/public/images/logoPS_light.png';
+import holding from '/public/images/workplace/holding1.png';
+import amnis from '/public/images/workplace/amniscode.png';
+import szczypka from '/public/images/workplace/logoPS_light.png';
 
 export default function Experience() {
   return (
@@ -10,7 +10,7 @@ export default function Experience() {
       <Title />
       <div
         className={
-          'pt-8 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  md:overflow-x-hidden md:w-full justify-between space-x-8'
+          'pt-8 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  md:overflow-x-hidden md:px-8 md:w-full justify-between space-x-8'
         }
       >
         <Card

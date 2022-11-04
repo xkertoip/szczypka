@@ -9,7 +9,7 @@ export default function useRandomNumber({ min, max }: Props) {
   const randomNumber = useCallback(() => {
     return Math.floor(Math.random() * (max - min)) + min;
   }, [max, min]);
-  const [[currentNumber, isClicked], setStatus] = useState([min, false]);
+  let [[currentNumber, isClicked], setStatus] = useState([min, false]);
 
   const handleClick = (value: number) => {
     setStatus([value, true]);
@@ -22,7 +22,7 @@ export default function useRandomNumber({ min, max }: Props) {
       if (isClicked) {
         clearInterval(interval);
       }
-    }, 5000);
+    }, 4000);
 
     return () => {
       clearInterval(interval);
@@ -32,7 +32,7 @@ export default function useRandomNumber({ min, max }: Props) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setStatus([randomNumber(), isClicked]);
-    }, 7000);
+    }, 4000);
     if (!isClicked) {
       clearTimeout(timeout);
     }

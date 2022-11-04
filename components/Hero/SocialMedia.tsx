@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import facebook from '/public/images/facebook.png';
-import github from '/public/images/github.png';
-import instagram from '/public/images/instagram.png';
+import facebook from '/public/images/socials/facebook.png';
+import github from '/public/images/socials/github.png';
+import instagram from '/public/images/socials/instagram.png';
 
 export default function SocialMedia() {
   return (

@@ -1,7 +1,7 @@
 import Hero from '../components/Hero/Hero';
 import Introduce from '../components/Introduce';
-import Skill from '../components/Skill';
 import Experience from '../components/Experience';
+import Skill from '../components/Skill';
 
 export default function Home() {
   return (
