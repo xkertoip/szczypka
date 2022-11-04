@@ -1,5 +1,7 @@
 import Hero from '../components/Hero/Hero';
 import Introduce from '../components/Introduce';
+import Skill from '../components/Skill';
+import Experience from '../components/Experience';
 
 export default function Home() {
   return (
@@ -13,6 +15,12 @@ export default function Home() {
       </section>
       <section className={'section-container relative overflow-hidden pb-16'}>
         <Introduce />
+      </section>
+      <section className={'section-container relative overflow-hidden pb-16'}>
+        <Experience />
+      </section>
+      <section className={'section-container relative overflow-hidden pb-16'}>
+        <Skill />
       </section>
     </main>
   );
