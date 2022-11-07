@@ -38,9 +38,9 @@ const transformStyle = plugin(function ({ addUtilities }) {
 
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}'
+    './src/app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
@@ -59,10 +59,10 @@ module.exports = {
         },
         wiggle: {
           '0, 100%': {
-            transform: 'rotate(-10deg)'
+            transform: 'rotate(0)'
           },
           '50%': {
-            transform: 'rotate(-15deg)'
+            transform: 'rotate(-10deg)'
           }
         },
         wiggleReverse: {
@@ -94,6 +94,14 @@ module.exports = {
           '75%': {
             transform: 'scaleX(1.05)'
           }
+        },
+        slideAnimation: {
+          from: {
+            transform: 'translateX(0%)'
+          },
+          to: {
+            transform: 'translateX(-100%)'
+          }
         }
       },
       animation: {
@@ -101,7 +109,8 @@ module.exports = {
         wiggle: 'wiggle 5s ease-in-out infinite',
         wiggleReverse: 'wiggleReverse 3s ease-in-out infinite',
         wiggleBg: 'wiggleBg 5s ease-in-out infinite',
-        letterWiggle: 'letterWiggle 0.3s ease-in-out'
+        letterWiggle: 'letterWiggle 0.3s ease-in-out',
+        slideAnimation: 'slideAnimation 5s linear infinite'
       }
     }
   },
