@@ -36,15 +36,11 @@ const Hamburger = () => {
       <div className={'relative w-9 h-4 flex z-[-1] rotate-90 '}>
         <motion.span
           variants={variantsStickFirst}
-          className={
-            'top-0 w-full absolute h-0.5 left-0 bg-zinc-900 dark:bg-neutral-300'
-          }
+          className={'top-0 w-full absolute h-0.5 left-0 bg-red-400'}
         />
         <motion.span
           variants={variantsStickLast}
-          className={
-            'bottom-0 w-full absolute h-0.5 left-0 bg-zinc-900 dark:bg-neutral-300'
-          }
+          className={'bottom-0 w-full absolute h-0.5 left-0 bg-red-400'}
         />
       </div>
     </motion.button>

@@ -7,7 +7,7 @@ export default function Title() {
       <h1 className={'title-big text-right'}>
         <span
           className={
-            'text-indigo-900 text-8xl sm:text-[10rem] hover:bg-red-400 duration-700'
+            'text-indigo-400 text-8xl sm:text-[10rem] hover:bg-red-400 duration-700'
           }
         >
           P

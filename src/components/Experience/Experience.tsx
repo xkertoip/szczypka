@@ -57,30 +57,6 @@ export default function Experience() {
             key={job}
           />
         ))}
-        {/*  <Card
-          image={holding}
-          time={'20/09/2019'}
-          description={
-            'First journey as a programmer and to be more specific as a junior Front end Developer. Made hardest decision in my life: React or Angular. Getting started with road map of web development'
-          }
-          job={'Internship'}
-        />
-        <Card
-          image={amnis}
-          time={'20/09/2019'}
-          description={
-            'First real job as a Junior Front end Developer.  Unplasand clash with reality, how much knowledge do I still have to acquire'
-          }
-          job={'Jr Frontend Dev'}
-        />
-        <Card
-          image={szczypka}
-          time={'20/09/2019'}
-          description={
-            "Slow way of self-study , browse the StackOverflow, independent creation of websites. I already have some knowledge about web development but still i discover that i don't know everything"
-          }
-          job={'Freelance'}
-        />*/}
       </div>
     </>
   );

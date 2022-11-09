@@ -1,5 +1,5 @@
-import Picker from './Picker';
 import SectionTitle from '../SectionTitle';
+import Content from './Content';
 
 export default function Skill() {
   return (
@@ -10,7 +10,9 @@ export default function Skill() {
         indicatorNumber={4}
         align={'left'}
       />
-      <Picker />
+      <div className={'pt-8 sm:grid sm:grid-cols-2 pt-8 space-y-8'}>
+        <Content />
+      </div>
     </>
   );
 }

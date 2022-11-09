@@ -25,17 +25,11 @@ export default function Card({ job, description, time, image, name }: Props) {
             <Image
               src={image}
               alt={'Piotr Szczypka'}
-              sizes="(max-width: 768px) 150px,
-                          200px"
-              className={
-                ' mx-auto w-auto absolute opacity-30 top-0 left-[50%] translate-x-[-50%]'
-              }
+              className={' mx-auto w-auto h-[64px]'}
             />
-            <h2 className={'text-red-400 capitalize text-center text-3xl'}>
-              {name}
-            </h2>
-
-            <h3 className={'text-right'}>{time}</h3>
+            <div className={'relative'}>
+              <h3 className={'text-right'}>{time}</h3>
+            </div>
 
             <p>{description}</p>
           </div>

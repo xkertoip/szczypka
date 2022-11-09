@@ -34,6 +34,15 @@
   .main--image__background {
     @apply relative  overflow-hidden  before:absolute before:w-full before:h-[85%] before:bg-red-400 before:bottom-0 before:rounded-3xl before:border before:border-indigo-400 before:z-[-1] rounded-3xl drop-shadow-3xl
   }
+  .framework--card {
+    @apply bg-zinc-800 drop-shadow-3xl hover:drop-shadow-4xl filter-none rounded-2xl border border-indigo-400  sm:hover:border-red-400  duration-700 perspective-3d flex items-center justify-center
+  }
+  .framework--card__front {
+   @apply relative  backface-hidden flex items-center justify-center bg-zinc-800
+  }
+  .framework--card__back {
+    @apply absolute top-0 left-0 w-full h-full backface-hidden rotate-y-180 flex items-center justify-center overflow-hidden
+  }
 
  /* .btn-primary__after{
     @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1  md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-700 after:z-[-1] after:animate-pulse;

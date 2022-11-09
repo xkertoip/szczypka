@@ -47,7 +47,7 @@ export default function Wrapper({ children }: Props) {
     <>
       <motion.div
         className={
-          'fixed bottom-0 left-0 w-full  h-screen origin-right bg-zinc-900/80 dark:bg-zinc-600/80 z-10 '
+          'fixed bottom-0 left-0 w-full  h-screen origin-right bg-indigo-400/80 z-10 '
         }
         initial="close"
         animate={openMenu ? 'open' : 'close'}
@@ -59,12 +59,12 @@ export default function Wrapper({ children }: Props) {
         <motion.div
           variants={variantsContainer}
           className={
-            'fixed left-0 bottom-0 w-full min-h-screen origin-right bg-neutral-300/50 dark:bg-zinc-900/80 px-4 md:px-20 pb-16 flex '
+            'fixed left-0 bottom-0 w-full min-h-screen origin-right bg-zinc-800/50 px-4 md:px-20 pb-16 flex '
           }
         >
           <div
             className={
-              'flex-auto flex flex-col justify-between border-b-2 border-primaryDark dark:border-primaryLight overflow-hidden'
+              'flex-auto flex flex-col justify-between border-b-2 border-indigo-400 overflow-hidden'
             }
           >
             {children}

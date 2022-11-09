@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 
 type Props = {
   min: number;
@@ -6,38 +6,33 @@ type Props = {
 };
 
 export default function useRandomNumber({ min, max }: Props) {
+  const timer = useRef<ReturnType<typeof setInterval> | null>(null);
   let randomNumber = useCallback(() => {
     return Math.floor(Math.random() * (max - min)) + min;
   }, [max, min]);
-  let [[currentNumber, isClicked], setStatus] = useState([min, false]);
+  let [currentRandomNumber, setCurrentRandomNumber] = useState(randomNumber);
+
+  const handleRandom = useCallback(() => {
+    setCurrentRandomNumber(randomNumber());
+  }, [randomNumber]);
 
   const handleClick = (value: number) => {
-    setStatus([value, true]);
+    setCurrentRandomNumber(value);
+    timer.current && clearInterval(timer.current);
+    timer.current = setInterval(() => {
+      handleRandom();
+    }, 4000);
   };
 
   useEffect(() => {
-    setStatus([currentNumber, false]);
-    const interval = setInterval(() => {
-      setStatus([randomNumber(), false]);
-      if (isClicked) {
-        clearInterval(interval);
-      }
+    timer.current = setInterval(() => {
+      handleRandom();
     }, 4000);
 
     return () => {
-      clearInterval(interval);
+      timer.current && clearInterval(timer.current);
     };
-  }, [randomNumber, isClicked, currentNumber]);
+  }, [handleRandom]);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setStatus([randomNumber(), isClicked]);
-    }, 4000);
-    if (!isClicked) {
-      clearTimeout(timeout);
-    }
-    return () => clearTimeout(timeout);
-  }, [isClicked, randomNumber]);
-
-  return { currentNumber, handleClick };
+  return { currentRandomNumber, handleClick };
 }

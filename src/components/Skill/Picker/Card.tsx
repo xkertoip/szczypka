@@ -12,7 +12,8 @@ const flipVariants = {
   neutral: {
     rotateY: 0,
     transition: {
-      duration: 1
+      duration: 1,
+      delay: 0.3
     }
   }
 };
@@ -35,38 +36,40 @@ export default function Card({
   return (
     <>
       <div
-        className={` min-w-[5rem] min-h-[5rem] md:min-w-[6rem] md:min-h-[6rem] drop-shadow-3xl hover:drop-shadow-4xl filter-none rounded-2xl border border-indigo-400  sm:hover:border-red-400 sm:dark:hover:border-secondary duration-700 perspective-3d ${
-          currentNumber === uniqueNumber
-            ? 'border-red-400'
-            : 'border-indigo-400'
-        }`}
         onClick={() => handler(uniqueNumber)}
+        className={'transform-preserve'}
       >
         <motion.div
           variants={flipVariants}
           animate={currentNumber === uniqueNumber ? 'flip' : 'neutral'}
-          className={'relative w-full h-full transform-preserve '}
+          className={`relative w-full h-full transform-preserve p-2 min-w-[4rem] min-h-[4rem] max-w-[4rem]  sm:min-w-[5rem] sm:min-h-[5rem]  framework--card ${
+            currentNumber === uniqueNumber
+              ? 'border-red-400'
+              : 'border-indigo-400'
+          }`}
         >
-          <div
+          <div className={`framework--card__front  `}>
+            <Image
+              src={image}
+              alt={name}
+              className={'h-[36px] sm:h-[42px] w-auto m-auto'}
+            />
+          </div>
+          <div className={'framework--card__back '}>{name}</div>
+          {/*    <div
             className={
               'absolute top-0 left-0 w-full h-full backface-hidden flex items-center justify-center'
             }
           >
-            <Image
-              src={image}
-              alt={name}
-              sizes="(max-width: 768px) 50px,
-                          75px"
-              className={'max-w-[3rem] max-h-[3rem] mx-auto w-auto h-auto'}
-            />
+            <Image src={image} alt={name} className={'h-[36px] w-auto'} />
           </div>
           <div
             className={
-              'absolute top-0 left-0 w-full h-full  backface-hidden  rotate-y-180 flex items-center justify-center'
+              'absolute top-0 left-0 w-full h-full backface-hidden rotate-y-180 flex items-center justify-center'
             }
           >
-            <h3 className={' text-center capitalize'}>{name}</h3>
-          </div>
+            <h3 className={' text-center capitalize text-xs'}>{name}</h3>
+          </div>*/}
         </motion.div>
       </div>
     </>
