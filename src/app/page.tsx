@@ -11,7 +11,7 @@ export default function Home() {
         <section className={'section-container min-h-screen grid'}>
           <Hero />
         </section>
-        <section className={'pr-[33%]'}>
+        <section className={''}>
           <Introduce />
         </section>
         <section className={' relative'}>

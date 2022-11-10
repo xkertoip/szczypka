@@ -25,9 +25,6 @@ const variants = {
 
 export default function Slider({ logo, name, number }: Props) {
   return (
-    /*    <div className={'relative  grid gap-4 '}>
-      <div className={'relative max-'}>*/
-
     <div className={'w-full h-full'}>
       <AnimatePresence>
         <motion.div
@@ -56,24 +53,3 @@ export default function Slider({ logo, name, number }: Props) {
     </div>
   );
 }
-/*    </div>*/
-{
-  /*      <div className={'relative'}>
-        <AnimatePresence>
-          <motion.div
-            key={name}
-            className={'absolute h-full w-full'}
-            variants={variants}
-            initial={'exit'}
-            animate={'animate'}
-            exit={'initial'}
-            transition={{
-              duration: 1
-            }}
-          >
-            <h2 className={'text-center text-2xl text-secondary'}>{name}</h2>
-          </motion.div>
-        </AnimatePresence>
-      </div>*/
-}
-/*    </div>*/

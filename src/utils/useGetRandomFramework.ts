@@ -1,23 +1,23 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 
 type Props = {
-  min: number;
+  array: any[];
   max: number;
 };
 
-export default function useRandomNumber({ min, max }: Props) {
+export default function useGetRandomFramework({ array, max }: Props) {
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
-  let randomNumber = useCallback(() => {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }, [max, min]);
-  let [currentRandomNumber, setCurrentRandomNumber] = useState(randomNumber);
+  let getRandomFramework = useCallback(() => {
+    return array[Math.floor(Math.random() * max)];
+  }, [max, array]);
+  let [currentFramework, setCurrentFramework] = useState(array[0]);
 
   const handleRandom = useCallback(() => {
-    setCurrentRandomNumber(randomNumber());
-  }, [randomNumber]);
+    setCurrentFramework(getRandomFramework());
+  }, [getRandomFramework]);
 
   const handleClick = (value: number) => {
-    setCurrentRandomNumber(value);
+    setCurrentFramework(value);
     timer.current && clearInterval(timer.current);
     timer.current = setInterval(() => {
       handleRandom();
@@ -34,5 +34,5 @@ export default function useRandomNumber({ min, max }: Props) {
     };
   }, [handleRandom]);
 
-  return { currentRandomNumber, handleClick };
+  return { currentFramework, handleClick };
 }

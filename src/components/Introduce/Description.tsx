@@ -1,6 +1,18 @@
+import SectionTitle from '../SectionTitle';
+
 export default function Description() {
   return (
-    <div className={'space-y-8'}>
+    <div
+      className={
+        'space-y-8 bg-zinc-800 rounded-r-[4rem] py-8 section-container relative drop-shadow-3xl basis-2/3'
+      }
+    >
+      <SectionTitle
+        title={'Positive Guy'}
+        indicator={'Introduce'}
+        indicatorNumber={2}
+        align={'left'}
+      />
       <p>
         I come from Kasinka Mała, currently living in Kraków. I&apos;m
         imaginative person with a strong sense of humor. I put huge emphasis on

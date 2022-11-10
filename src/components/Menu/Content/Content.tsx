@@ -20,7 +20,7 @@ const item = {
   }
 };
 
-const Content: FunctionComponent = () => {
+export default function Content() {
   const { handleOpen } = useContext(MenuContext);
   return (
     <>
@@ -32,16 +32,14 @@ const Content: FunctionComponent = () => {
         </motion.h2>
       </div>
       <nav>
-        <menu className={'overflow-hidden pr-8'}>
+        <menu className={'overflow-hidden'}>
           <li
             onClick={handleOpen}
             className={'overflow-hidden py-2 flex justify-end'}
           >
             <Link href={'/'}>
               <motion.p
-                className={
-                  'text-4xl md:text-6xl hover:text-secondary hover:dark:text-secondary ease-in-out duration-300'
-                }
+                className={'text-4xl md:text-6xl ease-in-out duration-300'}
                 variants={item}
               >
                 Home
@@ -54,9 +52,7 @@ const Content: FunctionComponent = () => {
           >
             <Link href={'/about'}>
               <motion.p
-                className={
-                  'text-4xl md:text-6xl hover:text-secondary hover:dark:text-secondary ease-in-out duration-300'
-                }
+                className={'text-4xl md:text-6xl ease-in-out duration-300'}
                 variants={item}
               >
                 About
@@ -69,9 +65,7 @@ const Content: FunctionComponent = () => {
           >
             <Link href={'/contact'}>
               <motion.p
-                className={
-                  'text-4xl md:text-6xl hover:text-secondary hover:dark:text-secondary ease-in-out duration-300'
-                }
+                className={'text-4xl md:text-6xl ease-in-out duration-300'}
                 variants={item}
               >
                 Contact
@@ -80,13 +74,13 @@ const Content: FunctionComponent = () => {
           </li>
         </menu>
       </nav>
-      <ul className={'pb-4 text-active dark:text-secondary md:text-2xl'}>
-        <li className={'overflow-hidden'}>
+      <ul className={'pb-4  md:text-2xl'}>
+        <li className={'overflow-hidden text-indigo-400'}>
           <motion.p variants={item}>Kasinka Mała, 648</motion.p>
         </li>
         <li className={'overflow-hidden'}>
           <motion.p variants={item}>
-            <motion.a href="tel:+48 536 777 364">+48 536 777 364</motion.a>
+            <motion.a href="tel:+48536777364">+48 536 777 364</motion.a>
           </motion.p>
         </li>
         <li className={'overflow-hidden'}>
@@ -95,5 +89,4 @@ const Content: FunctionComponent = () => {
       </ul>
     </>
   );
-};
-export default Content;
+}

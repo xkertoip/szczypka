@@ -1,4 +1,3 @@
-'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -23,12 +22,12 @@ type Props = {
   image: any;
   name: string;
   handler: (value: number) => void;
-  currentNumber: number;
+  currentFrameworkUniqueNumber: number;
 };
 
 export default function Card({
   handler,
-  currentNumber,
+  currentFrameworkUniqueNumber,
   uniqueNumber,
   name,
   image
@@ -41,9 +40,11 @@ export default function Card({
       >
         <motion.div
           variants={flipVariants}
-          animate={currentNumber === uniqueNumber ? 'flip' : 'neutral'}
+          animate={
+            currentFrameworkUniqueNumber === uniqueNumber ? 'flip' : 'neutral'
+          }
           className={`relative w-full h-full transform-preserve p-2 min-w-[4rem] min-h-[4rem] max-w-[4rem]  sm:min-w-[5rem] sm:min-h-[5rem]  framework--card ${
-            currentNumber === uniqueNumber
+            currentFrameworkUniqueNumber === uniqueNumber
               ? 'border-red-400'
               : 'border-indigo-400'
           }`}
@@ -53,23 +54,11 @@ export default function Card({
               src={image}
               alt={name}
               className={'h-[36px] sm:h-[42px] w-auto m-auto'}
+              sizes="(max-width: 768px) 56px,
+                          100px"
             />
           </div>
           <div className={'framework--card__back '}>{name}</div>
-          {/*    <div
-            className={
-              'absolute top-0 left-0 w-full h-full backface-hidden flex items-center justify-center'
-            }
-          >
-            <Image src={image} alt={name} className={'h-[36px] w-auto'} />
-          </div>
-          <div
-            className={
-              'absolute top-0 left-0 w-full h-full backface-hidden rotate-y-180 flex items-center justify-center'
-            }
-          >
-            <h3 className={' text-center capitalize text-xs'}>{name}</h3>
-          </div>*/}
         </motion.div>
       </div>
     </>

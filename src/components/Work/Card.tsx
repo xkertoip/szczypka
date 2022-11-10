@@ -19,7 +19,12 @@ export default function Card({ link, image, title, technology }: Props) {
           }
         >
           <div className={'relative h-auto  z-[-1]'}>
-            <Image src={image} alt={'Piotr Szczypka'} />
+            <Image
+              src={image}
+              alt={'Piotr Szczypka'}
+              sizes="(max-width: 768px) 350px,
+                          450px"
+            />
           </div>
           <div
             className={

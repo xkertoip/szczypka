@@ -1,7 +1,6 @@
 'use client';
 
-import useRandomNumber from '../../utils/useRandomNumber';
-import Card from './Picker/Card';
+import Card from './Card/Card';
 import Slider from './Slider';
 import react from '/public/images/frameworks/react.png';
 import next from '/public/images/frameworks/next.png';
@@ -15,7 +14,7 @@ import railway from '/public/images/frameworks/railway.png';
 import tailwind from '/public/images/frameworks/tailwind.png';
 import figma from '/public/images/frameworks/figma.png';
 import wordpress from '/public/images/frameworks/wordpress.png';
-import useFindEqualUniqueNumber from '../../utils/useFindEqual';
+import useGetRandomFramework from '../../utils/useGetRandomFramework';
 
 const frameworks = [
   {
@@ -81,13 +80,9 @@ const frameworks = [
 ];
 
 export default function Content() {
-  const { currentRandomNumber, handleClick } = useRandomNumber({
-    min: frameworks[0].uniqueNumber,
-    max: frameworks.length
-  });
-  const currentFramework = useFindEqualUniqueNumber({
+  const { currentFramework, handleClick } = useGetRandomFramework({
     array: frameworks,
-    compare: currentRandomNumber
+    max: frameworks.length
   });
 
   return (
@@ -114,7 +109,7 @@ export default function Content() {
             image={image}
             name={name}
             handler={handleClick}
-            currentNumber={currentRandomNumber}
+            currentFrameworkUniqueNumber={currentFramework.uniqueNumber}
             key={uniqueNumber}
           />
         ))}
