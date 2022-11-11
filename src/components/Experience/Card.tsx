@@ -8,7 +8,7 @@ type Props = {
   name: string;
 };
 
-export default function Card({ job, description, time, image, name }: Props) {
+export default function Card({ job, description, time, image }: Props) {
   return (
     <>
       <article
@@ -18,7 +18,7 @@ export default function Card({ job, description, time, image, name }: Props) {
       >
         <div
           className={
-            ' drop-shadow-3xl bg-zinc-800 hover:drop-shadow-4xl grow border border-indigo-400 hover:border-red-400 duration-700 p-4 rounded-3xl'
+            ' drop-shadow-3xl bg-zinc-800 hover:drop-shadow-4xl grow border-t border-indigo-400 duration-700 p-4 rounded-3xl'
           }
         >
           <div className={'space-y-4 relative'}>

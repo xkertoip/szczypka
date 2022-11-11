@@ -35,7 +35,7 @@
     @apply relative  overflow-hidden  before:absolute before:w-full before:h-[85%] before:bg-red-400 before:bottom-0 before:rounded-3xl before:border before:border-indigo-400 before:z-[-1] rounded-3xl drop-shadow-3xl
   }
   .framework--card {
-    @apply bg-zinc-800 drop-shadow-3xl hover:drop-shadow-4xl filter-none rounded-2xl border border-indigo-400  sm:hover:border-red-400  duration-700 perspective-3d flex items-center justify-center
+    @apply bg-zinc-800  rounded-2xl border border-indigo-400  sm:hover:border-red-400  duration-700 perspective-3d flex items-center justify-center
   }
   .framework--card__front {
    @apply relative  backface-hidden flex items-center justify-center bg-zinc-800

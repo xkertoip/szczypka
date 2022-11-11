@@ -45,8 +45,8 @@ module.exports = {
   theme: {
     extend: {
       dropShadow: {
-        '3xl': '5px 7px 7px rgba(24, 24, 27, 0.5)',
-        '4xl': '5px 7px 7px rgba(129, 140, 248, 0.4)'
+        '3xl': '5px 7px 14px rgba(24, 24, 27, 0.5)',
+        '4xl': '5px 7px 14px rgba(129, 140, 248, 0.4)'
       },
       keyframes: {
         move: {

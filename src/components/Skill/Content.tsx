@@ -1,6 +1,6 @@
 'use client';
 
-import Card from './Card/Card';
+import Card from './Card';
 import Slider from './Slider';
 import react from '/public/images/frameworks/react.png';
 import next from '/public/images/frameworks/next.png';
@@ -89,7 +89,7 @@ export default function Content() {
     <>
       <div
         className={
-          'relative  w-[200px] h-[200px] sm:min-w-[250px] sm:min-h-[250px] border border-indigo-400 rounded-3xl overflow-hidden flex justify-center items-center m-auto'
+          'relative bg-zinc-800 w-[200px] h-[200px] sm:min-w-[250px] sm:min-h-[250px]  border-t border-indigo-400 rounded-3xl drop-shadow-3xl overflow-hidden flex justify-center items-center m-auto'
         }
       >
         <Slider
@@ -99,9 +99,7 @@ export default function Content() {
         />
       </div>
       <div
-        className={
-          'flex flex-wrap justify-center  gap-4 z-2 relative  relative'
-        }
+        className={'flex flex-wrap justify-center gap-4 z-2 relative  relative'}
       >
         {frameworks.map(({ image, uniqueNumber, name }) => (
           <Card

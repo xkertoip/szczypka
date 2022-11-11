@@ -4,7 +4,7 @@ export default function Description() {
   return (
     <div
       className={
-        'space-y-8 bg-zinc-800 rounded-r-[4rem] py-8 section-container relative drop-shadow-3xl basis-2/3'
+        'space-y-8 bg-zinc-800 rounded-r-[3rem] py-8 section-container border-t border-indigo-400 relative drop-shadow-3xl basis-2/3'
       }
     >
       <SectionTitle
@@ -23,7 +23,7 @@ export default function Description() {
       <p>You will find my resume attached below.</p>
       <button
         className={
-          'btn-primary btn-primary__before flex ml-auto btn-primary__after'
+          'btn-primary btn-primary__before flex mx-auto btn-primary__after'
         }
       >
         <a href={'#about'}>Resume</a>

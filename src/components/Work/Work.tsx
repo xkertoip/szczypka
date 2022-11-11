@@ -49,9 +49,7 @@ export default function Work() {
         indicator={'projects'}
         indicatorNumber={5}
       />
-      <div className={'md:flex md:flex-wrap md:gap-8 py-16'}>
-        {renderCars()}
-      </div>
+      <div className={'py-16 space-y-8'}>{renderCars()}</div>
     </section>
   );
 }

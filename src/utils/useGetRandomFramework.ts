@@ -15,9 +15,13 @@ export default function useGetRandomFramework({ array, max }: Props) {
   const handleRandom = useCallback(() => {
     setCurrentFramework(getRandomFramework());
   }, [getRandomFramework]);
+  function findFrameworkByUniqueNumber(value: number) {
+    return array.find(element => element.uniqueNumber === value);
+  }
 
   const handleClick = (value: number) => {
-    setCurrentFramework(value);
+    setCurrentFramework(findFrameworkByUniqueNumber(value));
+
     timer.current && clearInterval(timer.current);
     timer.current = setInterval(() => {
       handleRandom();

@@ -10,7 +10,7 @@ export default function Skill() {
         indicatorNumber={4}
         align={'left'}
       />
-      <div className={'pt-8 sm:grid sm:grid-cols-2 pt-8 space-y-8'}>
+      <div className={'pt-8 grid sm:grid-cols-2 gap-8 pt-8'}>
         <Content />
       </div>
     </>

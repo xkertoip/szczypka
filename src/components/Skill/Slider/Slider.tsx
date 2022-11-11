@@ -25,7 +25,7 @@ const variants = {
 
 export default function Slider({ logo, name, number }: Props) {
   return (
-    <div className={'w-full h-full'}>
+    <div className={'w-full h-full '}>
       <AnimatePresence>
         <motion.div
           key={number}
