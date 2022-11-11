@@ -3,7 +3,7 @@ import hero2 from '/public/images/me2_retusz.png';
 
 export default function AnimatedImage() {
   return (
-    <div className={'max-w-[150px] sm:max-w-[250px] main--image__card'}>
+    <div className={'max-w-[150px] sm:max-w-[250px] main--image__card my-auto'}>
       <div className={' m-auto main--image__background  '}>
         <Image
           src={hero2}

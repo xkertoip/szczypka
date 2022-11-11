@@ -44,7 +44,7 @@ export default function Experience() {
       </div>
       <div
         className={
-          'pt-8 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  md:overflow-x-hidden section-container md:w-full justify-between space-x-8'
+          'flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  md:overflow-x-hidden section-container md:w-full justify-between space-x-8'
         }
       >
         {workplaces.map(({ time, job, description, image, name }) => (

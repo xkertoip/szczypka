@@ -3,6 +3,7 @@ import React from 'react';
 import Head from './head';
 import { Lora } from '@next/font/google';
 import { Providers } from './providers';
+import Footer from '../components/Footer';
 
 const lora = Lora();
 
@@ -18,6 +19,7 @@ export default function RootLayout({
       </Head>
       <body>
         <Providers>{children}</Providers>
+        <Footer />
       </body>
     </html>
   );

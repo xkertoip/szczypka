@@ -42,14 +42,14 @@ function renderCars() {
 }
 export default function Work() {
   return (
-    <section className={'section-container relative overflow-hidden pb-16'}>
+    <>
       <SectionTitle
         title={'Example work'}
         align={'right'}
         indicator={'projects'}
         indicatorNumber={5}
       />
-      <div className={'py-16 space-y-8'}>{renderCars()}</div>
-    </section>
+      <div className={'py-8 space-y-8'}>{renderCars()}</div>
+    </>
   );
 }

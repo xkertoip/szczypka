@@ -3,6 +3,7 @@ import Introduce from '../components/Introduce';
 import Experience from '../components/Experience';
 import Skill from '../components/Skill';
 import Work from '../components/Work';
+import Summary from '../components/Summary';
 
 export default function Home() {
   return (
@@ -11,16 +12,22 @@ export default function Home() {
         <section className={'section-container min-h-screen grid'}>
           <Hero />
         </section>
-        <section className={''}>
+        <section>
           <Introduce />
         </section>
-        <section className={' relative'}>
+        <section>
           <Experience />
         </section>
         <section className={'section-container relative'}>
           <Skill />
         </section>
-        <Work />
+        <section className={'section-container relative'}>
+          {' '}
+          <Work />
+        </section>
+        <section className={'section-container overflow-hidden'}>
+          <Summary />
+        </section>
       </div>
     </main>
   );

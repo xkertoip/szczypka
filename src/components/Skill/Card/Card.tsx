@@ -53,8 +53,7 @@ export default function Card({
             <Image
               src={image}
               alt={name}
-              className={''}
-              sizes="(max-width: 768px) 42px,
+              sizes="(max-width: 768px) 48px,
                           64px"
             />
           </div>
