@@ -43,7 +43,7 @@ export default function Card({
           animate={
             currentFrameworkUniqueNumber === uniqueNumber ? 'flip' : 'neutral'
           }
-          className={`relative transform-preserve p-2  max-w-[4rem]  framework--card ${
+          className={`relative transform-preserve p-4 framework--card ${
             currentFrameworkUniqueNumber === uniqueNumber
               ? 'border-red-400'
               : 'border-indigo-400'
@@ -53,11 +53,14 @@ export default function Card({
             <Image
               src={image}
               alt={name}
-              sizes="(max-width: 768px) 48px,
+              className={'max-w-[48px] lg:max-w-[64px]'}
+              sizes="(max-width: 1024px) 48px,
                           64px"
             />
           </div>
-          <div className={'framework--card__back '}>{name}</div>
+          <div className={'framework--card__back text-xs md:text-sm'}>
+            {name}
+          </div>
         </motion.div>
       </div>
     </>

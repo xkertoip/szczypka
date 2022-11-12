@@ -13,15 +13,15 @@ export default function Card({ job, description, time, image }: Props) {
     <>
       <article
         className={
-          ' snap-center flex-shrink-0 md:shrink w-full max-w-[250px] flex flex-col space-y-4 py-8'
+          ' snap-center min-w-[80vw] sm:min-w-min sm:basis-full flex flex-col py-8 sm:py-16'
         }
       >
         <div
           className={
-            ' drop-shadow-3xl bg-zinc-800 hover:drop-shadow-4xl grow border-t border-indigo-400 duration-700 p-4 rounded-3xl'
+            ' drop-shadow-3xl bg-zinc-800 hover:drop-shadow-4xl grow border-t border-indigo-400 duration-700 p-8 sm:py-16  rounded-3xl'
           }
         >
-          <div className={'space-y-4 relative'}>
+          <div className={'space-y-8 relative'}>
             <Image
               src={image}
               alt={'Piotr Szczypka'}
@@ -34,7 +34,7 @@ export default function Card({ job, description, time, image }: Props) {
             <p>{description}</p>
           </div>
         </div>
-        <div className={'flex items-end'}>
+        <div className={'flex items-end pt-8'}>
           <h2 className={'text-center  text-xl justify-self-center mx-auto'}>
             {job}
           </h2>

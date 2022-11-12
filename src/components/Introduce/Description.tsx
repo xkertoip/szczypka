@@ -4,7 +4,7 @@ export default function Description() {
   return (
     <div
       className={
-        'space-y-8 bg-zinc-800 rounded-r-[3rem] py-8 section-container border-t border-indigo-400 relative drop-shadow-3xl basis-2/3'
+        'space-y-8 bg-zinc-800 rounded-r-[3rem] py-8 sm:py-16 section-container border-t border-indigo-400 relative drop-shadow-3xl basis-2/3'
       }
     >
       <SectionTitle

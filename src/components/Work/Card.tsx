@@ -39,7 +39,7 @@ const wrapper = {
 export default function Card({ link, image, title, technology }: Props) {
   return (
     <>
-      <div className={'space-y-8 max-w-[350px] sm:max-w-[500px] mx-auto'}>
+      <div className={'space-y-8'}>
         <Link href={'/projects'}>
           <Perspective3d>
             <motion.div
@@ -56,8 +56,8 @@ export default function Card({ link, image, title, technology }: Props) {
                 <Image
                   src={image}
                   alt={'Piotr Szczypka'}
-                  sizes="(max-width: 768px) 350px,
-                          500px"
+                  sizes="(max-width: 768px) 90vw,
+                          40vw"
                 />
               </motion.div>
               <motion.div

@@ -14,7 +14,7 @@ export default function Summary() {
         <Perspective3d>
           <div
             className={
-              'min-h-[40vh] flex items-center justify-center drop-shadow-3xl rounded-3xl hover:drop-shadow-4xl bg-zinc-800'
+              'min-h-[40vh] sm:min-h-[50vh] max-w-[50vw] mx-auto flex items-center justify-center drop-shadow-3xl rounded-3xl hover:drop-shadow-4xl bg-zinc-800'
             }
           >
             <button

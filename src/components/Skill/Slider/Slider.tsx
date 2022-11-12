@@ -25,11 +25,11 @@ const variants = {
 
 export default function Slider({ logo, name, number }: Props) {
   return (
-    <div className={'w-full h-full '}>
+    <div className={'min-h-[200px] w-full sm:min-h-[300px]'}>
       <AnimatePresence>
         <motion.div
           key={number}
-          className={'absolute w-full h-full grid items-center p-4'}
+          className={'absolute w-full h-full grid items-center p-4 sm:p-8'}
           variants={variants}
           initial={'initial'}
           animate={'animate'}
@@ -38,7 +38,12 @@ export default function Slider({ logo, name, number }: Props) {
             duration: 1
           }}
         >
-          <Image src={logo} alt={name} className={'h-[4rem] w-auto mx-auto '} />
+          <Image
+            src={logo}
+            alt={name}
+            className={' mx-auto max-w-[4rem]'}
+            sizes="64px"
+          />
           <div className={'border-t border-indigo-400 pt-4'}>
             <h2
               className={

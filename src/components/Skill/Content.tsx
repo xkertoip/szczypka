@@ -89,7 +89,7 @@ export default function Content() {
     <>
       <div
         className={
-          'relative bg-zinc-800 w-[200px] h-[200px] sm:min-w-[250px] sm:min-h-[250px]  border-t border-indigo-400 rounded-3xl drop-shadow-3xl overflow-hidden flex justify-center items-center m-auto'
+          ' sm:basis-1/3 relative bg-zinc-800 max-w-[80%] m-auto border-t border-indigo-400 rounded-3xl drop-shadow-3xl overflow-hidden flex justify-center items-center'
         }
       >
         <Slider
@@ -99,7 +99,9 @@ export default function Content() {
         />
       </div>
       <div
-        className={'flex flex-wrap justify-center gap-4 z-2 relative  relative'}
+        className={
+          'sm:basis-2/3 flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 relative pt-8 sm:pt-0'
+        }
       >
         {frameworks.map(({ image, uniqueNumber, name }) => (
           <Card
