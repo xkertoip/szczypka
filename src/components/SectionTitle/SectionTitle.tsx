@@ -13,12 +13,10 @@ export default function SectionTitle({
 }: Props) {
   return (
     <>
-      <>
-        <h2 className={`section-title text-${align}`}>{title}</h2>
-        <h3 className={`section-indicator pt-4 text-${align} `}>
-          N&#176;{indicatorNumber}&nbsp;{indicator}
-        </h3>
-      </>
+      <h2 className={`section-title text-${align}`}>{title}</h2>
+      <h3 className={`section-indicator pt-4 text-${align} `}>
+        N&#176;{indicatorNumber}&nbsp;{indicator}
+      </h3>
     </>
   );
 }

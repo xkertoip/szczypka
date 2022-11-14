@@ -1,6 +1,7 @@
+'use client';
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
-import MenuContext from '../../MenuContext';
+import { MenuContext } from '../../../context/MenuContext';
 
 const variantsStickFirst = {
   open: {
@@ -43,11 +44,11 @@ export default function Hamburger() {
       <div className={'relative w-3 h-6 flex m-auto '}>
         <motion.span
           variants={variantsStickFirst}
-          className={'top-0 h-full absolute w-0.5 left-0 bg-zinc-800'}
+          className={'top-0 h-full absolute w-1 left-0 bg-zinc-800'}
         />
         <motion.span
           variants={variantsStickLast}
-          className={'top-0 h-full absolute w-0.5 right-0 bg-zinc-800'}
+          className={'top-0 h-full absolute w-1 right-0 bg-zinc-800'}
         />
       </div>
     </motion.button>

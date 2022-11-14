@@ -12,7 +12,11 @@ export default function Title() {
         >
           P
         </span>
-        <span className={'relative -left-4 hover:bg-indigo-400 duration-700 '}>
+        <span
+          className={
+            'relative -left-4 hover:bg-indigo-400 duration-700 text-[4rem] sm:text-[5rem]'
+          }
+        >
           iotr
         </span>
       </h1>

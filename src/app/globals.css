@@ -5,7 +5,7 @@
 
 @layer components {
   .btn-primary {
-    @apply p-4 drop-shadow-3xl text-2xl z-[1] bg-zinc-800 hover:translate-x-2 overflow-hidden duration-700
+    @apply p-4 drop-shadow-3xl text-2xl z-[1] bg-zinc-800 hover:translate-x-2 overflow-hidden duration-700 w-fit
   }
   .btn-primary__before {
     @apply before:h-px before:absolute before:w-full before:top-0 before:left-0 before:-translate-x-[100%] hover:before:translate-x-0 before:duration-700 before:bg-red-400
@@ -17,10 +17,10 @@
     @apply hover:drop-shadow-4xl hover:translate-x-2 duration-700 before:w-full sm:before:-translate-x-[100%] overflow-hidden relative before:absolute before:h-px hover:before:translate-x-0 before:bottom-0 before:left-0 before:bg-red-400 before:duration-700
   }
   .letter-animate__odd {
-    @apply hover:text-red-400 duration-700 inline-block hover:animate-letterWiggle
+    @apply hover:text-red-400 duration-700 inline-block hover:animate-letterWiggle text-[4rem] sm:text-[5rem]
   }
   .letter-animate__even {
-    @apply hover:text-indigo-400 duration-700 inline-block hover:animate-letterWiggle
+    @apply hover:text-indigo-400 duration-700 inline-block hover:animate-letterWiggle text-[4rem] sm:text-[5rem]
   }
   .section--image__card {
     @apply relative before:absolute before:drop-shadow-3xl before:w-full before:h-[100%] before:bg-red-400 before:bottom-0 before:rounded-2xl before:-rotate-[15deg] before:origin-center  before:animate-wiggle h-fit  z-[-1]
@@ -43,6 +43,14 @@
   .framework--card__back {
     @apply absolute top-0 left-0 w-full h-full backface-hidden rotate-y-180 flex items-center justify-center overflow-hidden
   }
+
+  .work--card {
+    @apply relative border-t border-indigo-400 rounded-3xl overflow-hidden drop-shadow-3xl hover:drop-shadow-4xl duration-700
+  }
+  .work--card__btn {
+    @apply absolute  bg-red-400 top-[50%] left-[50%] w-[70px] h-[70px] rounded-full flex items-center justify-center z-[-1] drop-shadow-xl
+  }
+
 
  /* .btn-primary__after{
     @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1  md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-700 after:z-[-1] after:animate-pulse;
@@ -75,7 +83,7 @@
     @apply bg-zinc-800
   }
   *, :before, :after {
-    @apply text-zinc-300
+    @apply text-zinc-300 lg:text-lg
   }
   .looper__innerList[data-animate="true"] .looper__listInstance {
     @apply animate-slideAnimation

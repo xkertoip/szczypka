@@ -1,8 +1,7 @@
 'use client';
-
 import { motion } from 'framer-motion';
 import React, { useContext } from 'react';
-import MenuContext from '../../MenuContext';
+import { MenuContext } from '../../../context/MenuContext';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 

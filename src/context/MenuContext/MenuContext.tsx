@@ -1,12 +1,20 @@
 'use client';
-import { ReactNode, useState } from 'react';
-import MenuContext from '../MenuContext/MenuContext';
+import { ReactNode, useState, createContext } from 'react';
 
+interface MenuContextType {
+  openMenu: boolean;
+  handleOpen: () => void;
+}
+
+export const MenuContext = createContext<MenuContextType>({
+  openMenu: false,
+  handleOpen: () => null
+});
 type Props = {
   children: ReactNode;
 };
 
-export default function MenuProvider({ children }: Props) {
+export function MenuProvider({ children }: Props) {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const handleOpen = () => {
     setOpenMenu(currentState => !currentState);

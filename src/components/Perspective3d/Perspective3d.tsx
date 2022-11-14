@@ -15,8 +15,8 @@ type Props = {
 export default function Perspective3d({ children }: Props) {
   const elementRef = useRef<HTMLDivElement>(null);
   const [[widthCont, heightCont], setContainer] = useState([0, 0]);
-  const x = useMotionValue(widthCont / 2);
-  const y = useMotionValue(heightCont / 2);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
   const setupElement = useCallback(() => {
     if (!elementRef?.current) return;

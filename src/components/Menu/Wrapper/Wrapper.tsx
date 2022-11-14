@@ -1,6 +1,8 @@
+'use client';
+
 import { ReactNode, useContext } from 'react';
 import { motion } from 'framer-motion';
-import MenuContext from '../../MenuContext';
+import { MenuContext } from '../../../context/MenuContext';
 
 type Props = {
   children: ReactNode;

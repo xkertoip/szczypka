@@ -1,3 +1,4 @@
+'use client';
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 
 type Props = {

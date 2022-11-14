@@ -4,6 +4,7 @@ import Experience from '../components/Experience';
 import Skill from '../components/Skill';
 import Work from '../components/Work';
 import Summary from '../components/Summary';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -22,13 +23,13 @@ export default function Home() {
           <Skill />
         </section>
         <section className={'section-container relative'}>
-          {' '}
           <Work />
         </section>
         <section className={'section-container overflow-hidden'}>
           <Summary />
         </section>
       </div>
+      <Footer />
     </main>
   );
 }

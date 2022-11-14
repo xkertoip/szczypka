@@ -1,8 +1,9 @@
 import SectionTitle from '../SectionTitle';
-import Card from './Card';
-import bierowiec from '/public/images/projects/Bierowiec.jpg';
-import amnis from '/public/images/projects/AmnisCode.jpg';
-import folio from '/public/images/projects/folio.jpg';
+import Project from './Project/Project';
+import bierowiec from '/public/images/projects/Bierowiec.png';
+import amnis from '/public/images/projects/AmnisCode.png';
+import amnisBlog from '/public/images/projects/AmnisBlog.png';
+import folio from '/public/images/projects/folio.png';
 
 const cards = [
   {
@@ -24,10 +25,10 @@ const cards = [
     technology: ['react', 'nextjs', 'tailwind']
   },
   {
-    title: 'AmnisCode',
-    image: amnis,
+    title: 'AnmnisCode Blog',
+    image: amnisBlog,
     link: '',
-    technology: ['react', 'nextjs', 'tailwind']
+    technology: ['wordpress', 'css']
   }
 ];
 
@@ -35,7 +36,7 @@ function renderCars() {
   return (
     <>
       {cards.map(({ technology, image, link, title }) => (
-        <Card
+        <Project
           key={title}
           link={link}
           image={image}
@@ -55,9 +56,7 @@ export default function Work() {
         indicator={'projects'}
         indicatorNumber={5}
       />
-      <div
-        className={'py-8 space-y-8 sm:grid sm:grid-cols-2 sm:gap-8 lg:gap-16'}
-      >
+      <div className={'py-8 sm:grid sm:grid-cols-2 sm:gap-8 lg:gap-16'}>
         {renderCars()}
       </div>
     </>
