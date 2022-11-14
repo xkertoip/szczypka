@@ -38,7 +38,7 @@ export default function Hamburger() {
       aria-label={'menu'}
       id={'menu'}
       className={
-        ' fixed top-[50%] -translate-y-[50%] w-9 right-0 z-50 h-12 bg-red-400 hover:bg-indigo-400 duration-700 rounded-l-2xl drop-shadow-3xl hover:drop-shadow-4xl'
+        ' fixed top-[50%] -translate-y-[50%] w-9 right-0 z-50 h-12 bg-red-400 sm:hover:bg-indigo-400 duration-700 rounded-l-2xl drop-shadow-3xl sm:hover:drop-shadow-4xl'
       }
     >
       <div className={'relative w-3 h-6 flex m-auto '}>

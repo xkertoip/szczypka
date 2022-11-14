@@ -1,4 +1,4 @@
-import Card from './Card';
+import Workplace from './Workplace';
 import holding from '/public/images/workplace/holding1.png';
 import amnis from '/public/images/workplace/amniscode.png';
 import szczypka from '/public/images/workplace/logoPS_light.png';
@@ -48,7 +48,7 @@ export default function Experience() {
         }
       >
         {workplaces.map(({ time, job, description, image, name }) => (
-          <Card
+          <Workplace
             image={image}
             time={time}
             description={description}

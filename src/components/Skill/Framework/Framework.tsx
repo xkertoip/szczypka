@@ -25,7 +25,7 @@ type Props = {
   currentFrameworkUniqueNumber: number;
 };
 
-export default function Card({
+export default function Framework({
   handler,
   currentFrameworkUniqueNumber,
   uniqueNumber,
@@ -56,6 +56,7 @@ export default function Card({
               className={'max-w-[48px] lg:max-w-[64px]'}
               sizes="(max-width: 1024px) 48px,
                           64px"
+              placeholder={'blur'}
             />
           </div>
           <div className={'framework--card__back text-xs md:text-sm'}>

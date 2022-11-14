@@ -8,7 +8,7 @@ type Props = {
   name: string;
 };
 
-export default function Card({ job, description, time, image }: Props) {
+export default function Workplace({ job, description, time, image }: Props) {
   return (
     <>
       <article
@@ -22,11 +22,14 @@ export default function Card({ job, description, time, image }: Props) {
           }
         >
           <div className={'space-y-8 relative'}>
-            <Image
-              src={image}
-              alt={'Piotr Szczypka'}
-              className={' mx-auto w-auto h-[64px]'}
-            />
+            <div className={'min-h-[4rem] flex'}>
+              <Image
+                src={image}
+                alt={'Piotr Szczypka'}
+                className={'m-auto'}
+                placeholder={'blur'}
+              />
+            </div>
             <div className={'relative'}>
               <h3 className={'text-right'}>{time}</h3>
             </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import Card from './Card';
+import Framework from './Framework';
 import Slider from './Slider';
 import react from '/public/images/frameworks/react.png';
 import next from '/public/images/frameworks/next.png';
@@ -104,7 +104,7 @@ export default function Content() {
         }
       >
         {frameworks.map(({ image, uniqueNumber, name }) => (
-          <Card
+          <Framework
             uniqueNumber={uniqueNumber}
             image={image}
             name={name}
