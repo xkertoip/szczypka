@@ -4,9 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Card from './Card';
 
-import Perspective3d from '../../Perspective3d';
-import useDetectDevice from '../../../utils/useDetectDevice';
-
 type Props = {
   link: string;
   image: any;
@@ -15,7 +12,6 @@ type Props = {
 };
 
 export default function Project({ link, image, title, technology }: Props) {
-  const isMobile = useDetectDevice();
   return (
     <>
       <div className={'space-y-4 sm:space-y-8 pb-8 sm:pb-0'}>
