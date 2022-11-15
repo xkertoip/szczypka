@@ -51,6 +51,10 @@
     @apply absolute  bg-red-400 top-[50%] left-[50%] w-[70px] h-[70px] rounded-full flex items-center justify-center z-[-1] drop-shadow-xl
   }
 
+  .input--field {
+    @apply drop-shadow-3xl hover:drop-shadow-4xl hover:border-red-400 focus:border-red-400 focus:drop-shadow-4xl rounded-3xl focus:outline-none focus:bg-zinc-800 bg-zinc-800 w-full p-4 mb-8 resize-none duration-700 border border-indigo-400
+  }
+
 
  /* .btn-primary__after{
     @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1  md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-700 after:z-[-1] after:animate-pulse;

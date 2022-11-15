@@ -1,4 +1,4 @@
-import introduce from '/public/images/rsz_introduce.jpg';
+import introduce from '/public/images/rsz_hero.jpg';
 import Image from 'next/image';
 
 export default function AnimatedImage() {

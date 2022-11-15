@@ -22,7 +22,7 @@ export default function Stepper() {
         </button>
         <div
           className={
-            'flex-auto border-t-2 border-primaryDark relative dark:border-primaryLight overflow-hidden before:border-t-2 before:absolute before:w-full before:top-0 before:left-0 before:z-[2]'
+            'flex-auto border-t-2 border-indigo-400 relative overflow-hidden before:border-t-2 before:absolute before:w-full before:top-0 before:left-0 before:z-[2]'
           }
         />
         <button
@@ -30,11 +30,7 @@ export default function Stepper() {
         >
           2
         </button>
-        <div
-          className={
-            'flex-auto border-t-2 border-primaryDark dark:border-primaryLight'
-          }
-        />
+        <div className={'flex-auto border-t-2 border-indigo-400'} />
         <button
           className={`rounded-full w-[42px] h-[42px] duration-700 bg-indigo-400
           `}
