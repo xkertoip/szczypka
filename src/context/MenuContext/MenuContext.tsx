@@ -2,29 +2,29 @@
 import { ReactNode, useState, createContext } from 'react';
 
 interface MenuContextType {
-  openMenu: boolean;
-  handleOpen: () => void;
+  toggle: boolean;
+  setToggleMenu: () => void;
 }
 
 export const MenuContext = createContext<MenuContextType>({
-  openMenu: false,
-  handleOpen: () => null
+  toggle: false,
+  setToggleMenu: () => {}
 });
 type Props = {
   children: ReactNode;
 };
 
 export function MenuProvider({ children }: Props) {
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const handleOpen = () => {
-    setOpenMenu(currentState => !currentState);
-  };
+  const [toggle, setToggle] = useState<boolean>(false);
+  function setToggleMenu() {
+    setToggle(prevState => !prevState);
+  }
 
   return (
     <MenuContext.Provider
       value={{
-        openMenu,
-        handleOpen: handleOpen
+        toggle,
+        setToggleMenu
       }}
     >
       {children}

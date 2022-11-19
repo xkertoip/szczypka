@@ -29,11 +29,11 @@ const variantsStickLast = {
 };
 
 export default function Hamburger() {
-  const { handleOpen, openMenu } = useContext(MenuContext);
+  const { toggle, setToggleMenu } = useContext(MenuContext);
   return (
     <motion.button
-      onClick={handleOpen}
-      animate={openMenu ? 'open' : 'close'}
+      onClick={setToggleMenu}
+      animate={toggle ? 'open' : 'close'}
       name={'menu'}
       aria-label={'menu'}
       id={'menu'}

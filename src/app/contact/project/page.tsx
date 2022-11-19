@@ -1,9 +1,15 @@
 import Stepper from '../../../components/Stepper';
+import Step from '../../../components/Step';
 
 export default function Project() {
   return (
     <>
-      <Stepper />
+      <div className={'sm:flex'}>
+        <Stepper />
+        <Step />
+      </div>
+
+      {/* TODOO: MAIL, SUCCESS MESSAGE */}
     </>
   );
 }

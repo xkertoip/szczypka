@@ -38,7 +38,7 @@ const routes = [
 ];
 
 export default function Content() {
-  const { handleOpen } = useContext(MenuContext);
+  const { setToggleMenu } = useContext(MenuContext);
   const pathname = usePathname();
 
   return (
@@ -53,7 +53,7 @@ export default function Content() {
           {routes.map(({ slug, name }) => (
             <li
               key={name}
-              onClick={handleOpen}
+              onClick={setToggleMenu}
               className={'overflow-hidden py-2 flex justify-end'}
             >
               <Link href={slug}>

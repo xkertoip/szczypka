@@ -1,13 +1,9 @@
 'use client';
 
 import { Form, Field, Formik } from 'formik';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
-
-interface Props {
-  budget?: number;
-  subject?: string;
-}
+import { ContactContext } from '../../context/ContactContext';
 
 const wrapper = {
   in: {
@@ -31,15 +27,9 @@ const wrapper = {
   }
 };
 
-export default function Mail({ budget, subject }: Props) {
+export default function Mail() {
+  const { mailInfo } = useContext(ContactContext);
   const [[mail, text], setValid] = useState([false, false]);
-
-  const initialValues = {
-    user_budget: budget,
-    user_email: '',
-    user_choice: subject,
-    user_message: ''
-  };
 
   const validateEmail = (value: string) => {
     let error;
@@ -72,9 +62,9 @@ export default function Mail({ budget, subject }: Props) {
     <>
       <motion.div variants={wrapper}>
         <Formik
-          initialValues={initialValues}
+          initialValues={mailInfo}
           onSubmit={values => {
-            console.log({ values });
+            console.log({ values }, mailInfo);
             alert(JSON.stringify(values, null, 2));
           }}
         >

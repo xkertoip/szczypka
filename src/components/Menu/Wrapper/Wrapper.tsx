@@ -44,7 +44,7 @@ const variantsBackground = {
 };
 
 export default function Wrapper({ children }: Props) {
-  const { openMenu } = useContext(MenuContext);
+  const { toggle } = useContext(MenuContext);
   return (
     <>
       <motion.div
@@ -52,7 +52,7 @@ export default function Wrapper({ children }: Props) {
           'fixed bottom-0 left-0 w-full  h-screen origin-right bg-zinc-800/90 z-10 '
         }
         initial="close"
-        animate={openMenu ? 'open' : 'close'}
+        animate={toggle ? 'open' : 'close'}
         variants={variantsBackground}
         transition={{
           duration: 0.3
