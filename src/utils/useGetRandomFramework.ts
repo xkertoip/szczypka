@@ -7,26 +7,30 @@ type Props = {
 
 export default function useGetRandomFramework({ array, max }: Props) {
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
-  let getRandomFramework = useCallback(() => {
+  const getRandomFramework = useCallback(() => {
     return array[Math.floor(Math.random() * max)];
   }, [max, array]);
-  let [currentFramework, setCurrentFramework] = useState(array[0]);
+  const [currentFramework, setCurrentFramework] = useState(array[0]);
 
   const handleRandom = useCallback(() => {
     setCurrentFramework(getRandomFramework());
   }, [getRandomFramework]);
-  function findFrameworkByUniqueNumber(value: number) {
-    return array.find(element => element.uniqueNumber === value);
-  }
-
-  const handleClick = (value: number) => {
-    setCurrentFramework(findFrameworkByUniqueNumber(value));
-
-    timer.current && clearInterval(timer.current);
-    timer.current = setInterval(() => {
-      handleRandom();
-    }, 4000);
-  };
+  const findFrameworkByUniqueNumber = useCallback(
+    (value: number) => {
+      return array.find(element => element.uniqueNumber === value);
+    },
+    [array]
+  );
+  const handleClick = useCallback(
+    (value: number) => {
+      setCurrentFramework(findFrameworkByUniqueNumber(value));
+      timer.current && clearInterval(timer.current);
+      timer.current = setInterval(() => {
+        handleRandom();
+      }, 4000);
+    },
+    [findFrameworkByUniqueNumber, handleRandom]
+  );
 
   useEffect(() => {
     timer.current = setInterval(() => {

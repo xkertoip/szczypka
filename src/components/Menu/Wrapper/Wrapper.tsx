@@ -1,11 +1,11 @@
 'use client';
 
-import { ReactNode, useContext } from 'react';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { MenuContext } from '../../../context/MenuContext';
 
 type Props = {
   children: ReactNode;
+  toggle: boolean;
 };
 
 const variantsContainer = {
@@ -43,8 +43,7 @@ const variantsBackground = {
   }
 };
 
-export default function Wrapper({ children }: Props) {
-  const { toggle } = useContext(MenuContext);
+export default function Wrapper({ children, toggle }: Props) {
   return (
     <>
       <motion.div

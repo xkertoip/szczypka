@@ -1,14 +1,12 @@
 import Image from 'next/image';
+import { WorkplaceObject } from '../../lib/types';
 
-type Props = {
-  image: any;
-  time: string;
-  description: string;
-  job: string;
-  name: string;
-};
-
-export default function Workplace({ job, description, time, image }: Props) {
+export default function Workplace({
+  job,
+  description,
+  time,
+  image
+}: WorkplaceObject) {
   return (
     <>
       <article

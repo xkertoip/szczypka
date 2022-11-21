@@ -5,8 +5,12 @@ import { Providers } from './providers';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main>
-      <div className={'section-container py-8 sm:py-16'}>
-        <div className={'pb-8 sm:pb-16'}>
+      <div
+        className={
+          'section-container md:flex md:gap-8 md:items-center md:justify-center min-h-screen'
+        }
+      >
+        <div className={' flex-1 pt-8 md:pt-0'}>
           <SectionTitle
             title={'Contact'}
             indicator={'Leave me a message!'}
@@ -14,7 +18,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             align={'left'}
           />
         </div>
-        <Providers>{children}</Providers>
+        <div className={'flex-1 pt-8 md:pt-0'}>
+          <Providers>{children}</Providers>
+        </div>
       </div>
     </main>
   );

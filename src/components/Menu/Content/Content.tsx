@@ -36,9 +36,11 @@ const routes = [
     name: 'contact'
   }
 ];
+type Props = {
+  toggleMenu: () => void;
+};
 
-export default function Content() {
-  const { setToggleMenu } = useContext(MenuContext);
+export default function Content({ toggleMenu }: Props) {
   const pathname = usePathname();
 
   return (
@@ -53,7 +55,7 @@ export default function Content() {
           {routes.map(({ slug, name }) => (
             <li
               key={name}
-              onClick={setToggleMenu}
+              onClick={toggleMenu}
               className={'overflow-hidden py-2 flex justify-end'}
             >
               <Link href={slug}>

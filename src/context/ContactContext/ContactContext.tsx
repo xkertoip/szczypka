@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import { createContext, ReactNode, useCallback, useState } from 'react';
 
 interface Mail {
   subject: string | undefined;
@@ -37,20 +37,32 @@ export function ContactProvider({ children }: Props) {
     subject: undefined,
     currentStep: 0
   });
-  function setSubject(subject: Mail['subject']) {
-    setMailInfo({ ...mailInfo, subject });
-  }
-  function setProjectSubject(projectSubject: Mail['projectSubject']) {
-    setMailInfo({ ...mailInfo, projectSubject, currentStep: 1 });
-  }
 
-  function setBudget(budget: Mail['budget']) {
-    setMailInfo({ ...mailInfo, budget, currentStep: 2 });
-  }
+  const setSubject = useCallback(
+    (subject: Mail['subject']) => {
+      setMailInfo({ ...mailInfo, subject });
+    },
+    [mailInfo]
+  );
+  const setProjectSubject = useCallback(
+    (projectSubject: Mail['projectSubject']) => {
+      setMailInfo({ ...mailInfo, projectSubject, currentStep: 1 });
+    },
+    [mailInfo]
+  );
+  const setBudget = useCallback(
+    (budget: Mail['budget']) => {
+      setMailInfo({ ...mailInfo, budget, currentStep: 2 });
+    },
+    [mailInfo]
+  );
 
-  function setStep(currentStep: Mail['currentStep']) {
-    setMailInfo({ ...mailInfo, currentStep });
-  }
+  const setStep = useCallback(
+    (currentStep: Mail['currentStep']) => {
+      setMailInfo({ ...mailInfo, currentStep });
+    },
+    [mailInfo]
+  );
 
   return (
     <ContactContext.Provider

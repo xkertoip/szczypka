@@ -16,6 +16,7 @@ export default function AnimatedImage() {
               alt={'Piotr Szczypka'}
               sizes="(max-width: 768px) 50vw,
                           300px"
+              placeholder={'blur'}
             />
           </div>
         </div>

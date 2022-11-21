@@ -3,8 +3,9 @@ import holding from '/public/images/workplace/holding1.png';
 import amnis from '/public/images/workplace/amniscode.png';
 import szczypka from '/public/images/workplace/logoPS_light.png';
 import SectionTitle from '../SectionTitle';
+import { WorkplaceObject } from '../../lib/types';
 
-const workplaces = [
+const workplaces: WorkplaceObject[] = [
   {
     image: holding,
     time: '20/09/2019',

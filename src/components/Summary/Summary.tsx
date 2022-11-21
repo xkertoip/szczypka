@@ -1,6 +1,6 @@
 import SectionTitle from '../SectionTitle';
 import Perspective3d from '../Perspective3d';
-
+import Link from 'next/link';
 export default function Summary() {
   return (
     <>
@@ -21,13 +21,14 @@ export default function Summary() {
               If you are intrested colaboration, just let me know
             </p>
 
-            <button
+            <Link
+              href={'/contact'}
               className={
                 'btn-primary btn-primary__before btn-primary__after mx-auto'
               }
             >
               Message
-            </button>
+            </Link>
           </div>
         </Perspective3d>
       </div>

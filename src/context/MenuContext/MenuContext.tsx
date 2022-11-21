@@ -1,14 +1,14 @@
 'use client';
-import { ReactNode, useState, createContext } from 'react';
+import { ReactNode, useState, createContext, useCallback } from 'react';
 
 interface MenuContextType {
   toggle: boolean;
-  setToggleMenu: () => void;
+  toggleMenu: () => void;
 }
 
 export const MenuContext = createContext<MenuContextType>({
   toggle: false,
-  setToggleMenu: () => {}
+  toggleMenu: () => {}
 });
 type Props = {
   children: ReactNode;
@@ -16,15 +16,16 @@ type Props = {
 
 export function MenuProvider({ children }: Props) {
   const [toggle, setToggle] = useState<boolean>(false);
-  function setToggleMenu() {
-    setToggle(prevState => !prevState);
-  }
+
+  const toggleMenu = useCallback(() => {
+    setToggle(!toggle);
+  }, [toggle]);
 
   return (
     <MenuContext.Provider
       value={{
         toggle,
-        setToggleMenu
+        toggleMenu
       }}
     >
       {children}

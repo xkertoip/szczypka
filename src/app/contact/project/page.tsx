@@ -4,9 +4,11 @@ import Step from '../../../components/Step';
 export default function Project() {
   return (
     <>
-      <div className={'sm:flex'}>
+      <div className={'flex gap-8 justify-between'}>
         <Stepper />
-        <Step />
+        <div className={'relative grow flex justify-center items-center'}>
+          <Step />
+        </div>
       </div>
 
       {/* TODOO: MAIL, SUCCESS MESSAGE */}

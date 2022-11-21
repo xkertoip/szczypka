@@ -2,7 +2,7 @@ import './globals.css';
 import React from 'react';
 import Head from './head';
 import { Lora } from '@next/font/google';
-import { Providers } from './providers';
+import Menu from '../components/Menu';
 
 const lora = Lora();
 
@@ -17,7 +17,8 @@ export default function RootLayout({
         <title>Piotr Szczypka - Creative Dev</title>
       </Head>
       <body>
-        <Providers>{children}</Providers>
+        <Menu />
+        {children}
       </body>
     </html>
   );

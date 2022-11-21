@@ -9,7 +9,7 @@ export default function Stepper() {
 
   return (
     <>
-      <div className={'py-8 lg:py-0 text-zinc-800 flex items-center'}>
+      <div className={' text-zinc-800'}>
         <button
           className={`rounded-full  w-[42px] h-[42px] duration-700 ${
             currentStep === 0 ? 'bg-red-400' : 'bg-indigo-400'
@@ -19,9 +19,11 @@ export default function Stepper() {
           1
         </button>
         <div
-          className={
-            'flex-auto bg-indigo-400 relative overflow-hidden h-px before:absolute before:w-full before:top-0 before:left-0 before:z-[2]'
-          }
+          className={`flex-auto bg-indigo-400 relative overflow-hidden mx-auto w-px h-[100px] before:absolute before:w-full before:h-full before:bg-red-400 before:top-0 before:left-0 before:z-[2] before:duration-700 ${
+            currentStep && currentStep >= 1
+              ? 'before:translate-y-0'
+              : 'before:translate-y-[-100%]'
+          }`}
         />
         <button
           className={`rounded-full w-[42px] h-[42px] duration-700  ${
@@ -31,7 +33,13 @@ export default function Stepper() {
         >
           2
         </button>
-        <div className={'flex-auto border-t-2 border-indigo-400'} />
+        <div
+          className={`flex-auto bg-indigo-400 relative overflow-hidden mx-auto w-px h-[100px] before:absolute before:w-full before:h-full before:bg-red-400 before:top-0 before:left-0 before:z-[2] before:duration-700 ${
+            currentStep && currentStep >= 2
+              ? 'before:translate-y-0'
+              : 'before:translate-y-[-100%]'
+          }`}
+        />
         <button
           className={`rounded-full w-[42px] h-[42px] duration-700  ${
             currentStep === 2 ? 'bg-red-400' : 'bg-indigo-400'

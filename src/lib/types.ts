@@ -11,3 +11,11 @@ export interface ProjectSubjects {
   slug: 'website' | 'mobile' | 'invasion';
   image: StaticImageData;
 }
+
+export interface WorkplaceObject {
+  image: StaticImageData;
+  time: string;
+  description: string;
+  job: string;
+  name: string;
+}

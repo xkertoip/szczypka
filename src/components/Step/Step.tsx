@@ -50,6 +50,7 @@ export default function Step() {
           exit={'out'}
           initial={'out'}
           animate={'in'}
+          className={'absolute'}
         >
           {currentStepContent}
         </motion.div>

@@ -6,7 +6,7 @@ type Props = {
 };
 
 export default function InfiniteLoop({ children }: Props) {
-  let [loopElement, setLoopElement] = useState(1);
+  const [loopElement, setLoopElement] = useState(1);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
