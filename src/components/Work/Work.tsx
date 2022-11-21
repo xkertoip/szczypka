@@ -56,7 +56,7 @@ export default function Work() {
         indicator={'projects'}
         indicatorNumber={5}
       />
-      <div className={'py-8 sm:grid grid-cols-2 justify-evenly gap-8'}>
+      <div className={'py-8 md:grid md:grid-cols-2 md:justify-evenly md:gap-8'}>
         {renderCars()}
       </div>
     </>

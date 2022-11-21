@@ -16,7 +16,7 @@ export default function Project({ image, title, technology }: Props) {
     <>
       <div
         className={
-          'space-y-4 sm:space-y-8 pb-8 sm:pb-0 max-w-[450px] max-h-[350px] mx-auto'
+          'space-y-4 sm:space-y-8 pb-8 sm:pb-0 max-w-[450px] max-h-[350px] mx-auto w-full'
         }
       >
         <Link href={'/contact'}>
