@@ -11,13 +11,13 @@ export default function Summary() {
         indicatorNumber={6}
       />
       <div className={'section-container py-12'}>
-        <Perspective3d>
+        <Perspective3d width={350} height={300}>
           <div
             className={
-              'grid p-8 sm:p-16 min-h-[40vh] sm:min-h-[50vh] sm:max-w-[50vw] mx-auto flex items-center justify-center drop-shadow-3xl rounded-3xl hover:drop-shadow-4xl bg-zinc-800'
+              'grid p-8 items-center justify-center drop-shadow-3xl rounded-3xl hover:drop-shadow-4xl bg-zinc-800'
             }
           >
-            <p className={'text-2xl'}>
+            <p className={'text-2xl pb-8'}>
               If you are intrested colaboration, just let me know
             </p>
 

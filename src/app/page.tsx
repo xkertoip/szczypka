@@ -25,6 +25,7 @@ export default function Home() {
         <section className={'section-container relative'}>
           <Work />
         </section>
+
         <section className={'section-container overflow-hidden'}>
           <Summary />
         </section>

@@ -10,23 +10,24 @@ import React, {
 
 type Props = {
   children: ReactNode;
+  width: number;
+  height: number;
 };
 
-export default function Perspective3d({ children }: Props) {
+export default function Perspective3d({ children, height, width }: Props) {
   const elementRef = useRef<HTMLDivElement>(null);
-  const [[widthCont, heightCont], setContainer] = useState([0, 0]);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  /*  const [[widthCont, heightCont], setContainer] = useState([0, 0]);*/
+  const x = useMotionValue(width / 2);
+  const y = useMotionValue(height / 2);
 
-  const setupElement = useCallback(() => {
+  /*  const setupElement = useCallback(() => {
     if (!elementRef?.current) return;
     const { width, height } = elementRef.current.getBoundingClientRect();
-
     setContainer([width, height]);
     x.set(widthCont / 2);
     y.set(heightCont / 2);
   }, [widthCont, heightCont, x, y]);
-  useEffect(() => setupElement(), [setupElement]);
+  useEffect(() => setupElement(), [setupElement]);*/
 
   function handlePosition(e: React.MouseEvent<HTMLDivElement>) {
     const { clientY, clientX } = e;
@@ -35,18 +36,22 @@ export default function Perspective3d({ children }: Props) {
     y.set(clientY - top);
   }
   function handleLeave() {
-    x.set(widthCont / 2);
-    y.set(heightCont / 2);
+    x.set(width / 2);
+    y.set(height / 2);
   }
 
-  const rotateX = useTransform(y, [0, heightCont], [10, -10]);
-  const rotateY = useTransform(x, [0, widthCont], [-10, 10]);
+  const rotateX = useTransform(y, [0, height], [10, -10]);
+  const rotateY = useTransform(x, [0, width], [-10, 10]);
 
   return (
     <motion.div
       onMouseMove={handlePosition}
       onMouseLeave={handleLeave}
-      className={'perspective-3d'}
+      className={'perspective-3d mx-auto w-full'}
+      style={{
+        maxWidth: width,
+        maxHeight: height
+      }}
     >
       <motion.div
         ref={elementRef}
@@ -58,7 +63,7 @@ export default function Perspective3d({ children }: Props) {
           scale: 1.05,
           transition: { duration: 0.3 }
         }}
-        className={'transform-preserve w-full duration-500 ease-linear'}
+        className={'transform-preserve w-full duration-500 ease-linear h-full'}
       >
         {children}
       </motion.div>

@@ -11,12 +11,16 @@ type Props = {
   title: string;
 };
 
-export default function Project({ link, image, title, technology }: Props) {
+export default function Project({ image, title, technology }: Props) {
   return (
     <>
-      <div className={'space-y-4 sm:space-y-8 pb-8 sm:pb-0'}>
+      <div
+        className={
+          'space-y-4 sm:space-y-8 pb-8 sm:pb-0 max-w-[450px] max-h-[350px] mx-auto'
+        }
+      >
         <Link href={'/contact'}>
-          <Card>
+          <Card maxWidth={450} maxHeight={350}>
             <Image
               src={image}
               alt={'Piotr Szczypka'}

@@ -6,6 +6,8 @@ import Perspective3d from '../../Perspective3d';
 
 type Props = {
   children: ReactNode;
+  maxWidth: number;
+  maxHeight: number;
 };
 
 const button = {
@@ -32,10 +34,10 @@ const wrapper = {
   }
 };
 
-export default function Card({ children }: Props) {
+export default function Card({ children, maxWidth, maxHeight }: Props) {
   return (
     <>
-      <Perspective3d>
+      <Perspective3d width={maxWidth} height={maxHeight}>
         <motion.div
           initial={'hidden'}
           whileHover={'show'}
