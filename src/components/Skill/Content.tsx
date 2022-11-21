@@ -92,11 +92,13 @@ export default function Content() {
           ' sm:basis-1/3 relative bg-zinc-800 max-w-[80%] m-auto border-t border-indigo-400 rounded-3xl drop-shadow-3xl overflow-hidden flex justify-center items-center'
         }
       >
-        <Slider
-          name={currentFramework.name}
-          number={currentFramework.uniqueNumber}
-          logo={currentFramework.image}
-        />
+        <div className={'min-h-[200px] w-full sm:min-h-[300px] relative'}>
+          <Slider
+            name={currentFramework.name}
+            number={currentFramework.uniqueNumber}
+            logo={currentFramework.image}
+          />
+        </div>
       </div>
       <div
         className={

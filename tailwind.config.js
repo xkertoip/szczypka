@@ -44,6 +44,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-lora)']
+      },
       dropShadow: {
         '3xl': '5px 7px 14px rgba(24, 24, 27, 0.5)',
         '4xl': '5px 7px 14px rgba(129, 140, 248, 0.4)'
