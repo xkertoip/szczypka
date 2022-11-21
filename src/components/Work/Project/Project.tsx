@@ -21,13 +21,7 @@ export default function Project({ image, title, technology }: Props) {
       >
         <Link href={'/contact'}>
           <Card maxWidth={450} maxHeight={350}>
-            <Image
-              src={image}
-              alt={'Piotr Szczypka'}
-              sizes="(max-width: 768px) 90vw,
-                          40vw"
-              placeholder={'blur'}
-            />
+            <Image src={image} alt={'Piotr Szczypka'} placeholder={'blur'} />
           </Card>
         </Link>
 

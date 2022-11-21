@@ -1,9 +1,9 @@
 import SectionTitle from '../SectionTitle';
 import Project from './Project/Project';
-import bierowiec from '/public/images/projects/Bierowiec.png';
-import amnis from '/public/images/projects/AmnisCode.png';
-import amnisBlog from '/public/images/projects/AmnisBlog.png';
-import folio from '/public/images/projects/folio.png';
+import bierowiec from '/public/images/projects/Bierowiec.jpg';
+import amnis from '/public/images/projects/AmnisCode.jpg';
+import amnisBlog from '/public/images/projects/AmnisBlog.jpg';
+import folio from '/public/images/projects/folio.jpg';
 
 const cards = [
   {

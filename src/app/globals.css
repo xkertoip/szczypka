@@ -41,7 +41,7 @@
    @apply relative  backface-hidden flex items-center justify-center bg-zinc-800
   }
   .framework--card__back {
-    @apply absolute top-0 left-0 w-full h-full backface-hidden rotate-y-180 flex items-center justify-center overflow-hidden
+    @apply absolute top-0 left-0 w-full h-full backface-hidden rotate-y-180 flex items-center justify-center overflow-hidden capitalize
   }
 
   .work--card {

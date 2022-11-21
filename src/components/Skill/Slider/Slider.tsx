@@ -45,11 +45,7 @@ export default function Slider({ logo, name, number }: Props) {
             sizes="64px"
           />
           <div className={'border-t border-indigo-400 pt-4'}>
-            <h2
-              className={
-                'text-center capitalize text-red-400 text-2xl  my-auto'
-              }
-            >
+            <h2 className={'text-center capitalize text-2xl my-auto'}>
               {name}
             </h2>
           </div>
