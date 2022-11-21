@@ -6,7 +6,7 @@ export default function AnimatedImage() {
     <div className={'relative basis-1/3'}>
       <div
         className={
-          'absolute left-0 -top-8  translate-x-[-50%] w-[50vw] sm:max-w-[300px] rotate-[15deg] z-[-1]'
+          'absolute left-0 -top-8  translate-x-[-50%] w-[50vw] sm:max-w-[350px] rotate-[15deg] z-[-1]'
         }
       >
         <div className={'section--image__card'}>
