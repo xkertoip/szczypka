@@ -1,11 +1,11 @@
 import './globals.css';
 import React from 'react';
 import Head from './head';
-import { Lora } from '@next/font/google';
+import localFont from '@next/font/local';
 import Menu from '../components/Menu';
 
-const lora = Lora({
-  variable: '--font-lora'
+const lora = localFont({
+  src: '../../public/fonts/Lora-Regular.ttf'
 });
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${lora.variable} font-sans`}>
+    <html lang="en" className={`${lora} font-sans`}>
       <Head>
         <title>Piotr Szczypka - Creative Dev</title>
       </Head>
