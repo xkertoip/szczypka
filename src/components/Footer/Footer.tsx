@@ -2,7 +2,7 @@ import SocialMedia from '../Hero/SocialMedia';
 
 export default function Footer() {
   return (
-    <footer>
+    <>
       <div className={'section-container pb-4'}>
         <div
           className={'p-4 border-t border-indigo-400 flex justify-start gap-4'}
@@ -18,6 +18,6 @@ export default function Footer() {
           <span>Made by Piotr Szczypka</span>
         </div>
       </div>
-    </footer>
+    </>
   );
 }
