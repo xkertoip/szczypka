@@ -16,7 +16,12 @@ export default function AnimatedImage() {
       >
         <div className={'main--image__background'} />
         <div className={'animate-move'}>
-          <Image src={hero2} alt={'Piotr Szczypka'} priority />
+          <Image
+            src={hero2}
+            alt={'Piotr Szczypka'}
+            priority
+            placeholder={'blur'}
+          />
         </div>
       </div>
     </div>
