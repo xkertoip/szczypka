@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <main>
       <div
         className={
-          'section-container md:flex md:gap-8 md:items-center md:justify-center min-h-screen'
+          'section-container lg:max-w-[1170px] lg:mx-auto md:flex md:gap-8 md:items-center md:justify-center min-h-screen'
         }
       >
         <div className={' flex-1 pt-8 md:pt-0'}>

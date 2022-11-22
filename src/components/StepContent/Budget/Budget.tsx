@@ -17,9 +17,7 @@ export default function Budget() {
 
   return (
     <>
-      <h2 className={' text-center text-2xl pb-8'}>
-        How much do you want to invest:
-      </h2>
+      <h2 className={' text-2xl pb-8'}>How much do you want to invest:</h2>
       <div className={'text-indigo-400 text-right'}>
         <span className={'text-2xl pb-8'}>{value}</span>
 

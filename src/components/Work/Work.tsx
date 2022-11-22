@@ -33,21 +33,15 @@ const cards: ProjectObject[] = [
   }
 ];
 
-function renderCars() {
-  return (
-    <>
-      {cards.map(({ technology, image, link, title }) => (
-        <Project
-          key={title}
-          link={link}
-          image={image}
-          technology={technology}
-          title={title}
-        />
-      ))}
-    </>
-  );
-}
+const Cards = cards.map(({ technology, image, link, title }) => (
+  <Project
+    key={title}
+    link={link}
+    image={image}
+    technology={technology}
+    title={title}
+  />
+));
 export default function Work() {
   return (
     <>
@@ -57,8 +51,10 @@ export default function Work() {
         indicator={'projects'}
         indicatorNumber={5}
       />
-      <div className={'py-8 md:flex md:flex-wrap md:justify-between md:gap-8'}>
-        {renderCars()}
+      <div
+        className={'py-8 sm:grid sm:grid-cols-2 sm:justify-between sm:gap-8'}
+      >
+        {Cards}
       </div>
     </>
   );

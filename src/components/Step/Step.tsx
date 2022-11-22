@@ -50,7 +50,7 @@ export default function Step() {
           exit={'out'}
           initial={'out'}
           animate={'in'}
-          className={'absolute'}
+          className={'absolute mx-auto w-full px-4'}
         >
           {currentStepContent}
         </motion.div>

@@ -6,7 +6,7 @@ export default function Project() {
     <>
       <div className={'flex gap-8 justify-between'}>
         <Stepper />
-        <div className={'relative grow flex justify-center items-center'}>
+        <div className={'relative grow flex justify-center'}>
           <Step />
         </div>
       </div>

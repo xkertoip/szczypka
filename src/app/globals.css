@@ -55,22 +55,12 @@
     @apply drop-shadow-3xl hover:drop-shadow-4xl hover:border-red-400 focus:border-red-400 focus:drop-shadow-4xl rounded-3xl focus:outline-none focus:bg-zinc-800 bg-zinc-800 w-full p-4 mb-8 resize-none duration-700 border border-indigo-400
   }
 
-
- /* .btn-primary__after{
-    @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1  md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-700 after:z-[-1] after:animate-pulse;
-  }
-  .btn-primary__before {
-    @apply before:absolute before:h-full before:w-full before:left-2 before:top-1 before:border-t before:border-l before:border-rose-900   md:before:translate-x-0 md:before:translate-y-0  md:hover:before:-translate-x-4 md:hover:before:-translate-y-4 before:z-[1] ;
-  }*/
   .title-big {
     @apply text-6xl sm:text-7xl
   }
   .section-title {
     @apply text-4xl sm:text-8xl
   }
-  /*    .interactive-title {
-          @apply
-      }*/
   .interactive-title__before {
     @apply relative overflow-hidden before:absolute before:w-full before:h-full before:top-0 before:left-0 before:translate-y-[100%] hover:before:translate-y-0  before:duration-500 before:z-[-1] before:bg-gray-500 before:skew-y-12 before:rotate-[15deg] hover:before:rotate-0 before:origin-left
   }

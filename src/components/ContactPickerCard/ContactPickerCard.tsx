@@ -23,7 +23,7 @@ export default function ContactPickerCard({ slug, name, image }: Props) {
     <>
       <motion.div
         className={
-          'relative overflow-hidden text-center rounded-3xl drop-shadow-3xl '
+          'relative overflow-hidden text-center rounded-3xl drop-shadow-3xl max-w-[300px] mx-auto'
         }
         whileHover={'hover'}
         initial={'neutral'}
