@@ -53,8 +53,6 @@ export default function Framework({
               src={framework.image}
               alt={framework.name}
               className={'max-w-[48px] lg:max-w-[64px]'}
-              sizes="(max-width: 1024px) 48px,
-                          64px"
               placeholder={'blur'}
             />
           </div>
