@@ -19,3 +19,9 @@ export interface WorkplaceObject {
   job: string;
   name: string;
 }
+
+export interface FrameworkObject {
+  image: StaticImageData;
+  name: string;
+  uniqueNumber: number;
+}

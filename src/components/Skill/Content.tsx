@@ -15,8 +15,9 @@ import tailwind from '/public/images/frameworks/tailwind.png';
 import figma from '/public/images/frameworks/figma.png';
 import wordpress from '/public/images/frameworks/wordpress.png';
 import useGetRandomFramework from '../../utils/useGetRandomFramework';
+import { FrameworkObject } from '../../lib/types';
 
-const frameworks = [
+const frameworks: FrameworkObject[] = [
   {
     image: react,
     name: 'react',
@@ -105,14 +106,12 @@ export default function Content() {
           'sm:basis-2/3 flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 relative pt-8 sm:pt-0'
         }
       >
-        {frameworks.map(({ image, uniqueNumber, name }) => (
+        {frameworks.map(framework => (
           <Framework
-            uniqueNumber={uniqueNumber}
-            image={image}
-            name={name}
+            framework={framework}
             handler={handleClick}
             currentFrameworkUniqueNumber={currentFramework.uniqueNumber}
-            key={uniqueNumber}
+            key={framework.uniqueNumber}
           />
         ))}
       </div>

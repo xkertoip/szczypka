@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { FrameworkObject } from '../../../lib/types';
 
 const flipVariants = {
   flip: {
@@ -18,41 +19,39 @@ const flipVariants = {
 };
 
 type Props = {
-  uniqueNumber: number;
-  image: any;
-  name: string;
+  framework: FrameworkObject;
   handler: (value: number) => void;
   currentFrameworkUniqueNumber: number;
 };
 
 export default function Framework({
   handler,
-  currentFrameworkUniqueNumber,
-  uniqueNumber,
-  name,
-  image
+  framework,
+  currentFrameworkUniqueNumber
 }: Props) {
   return (
     <>
       <div
-        onClick={() => handler(uniqueNumber)}
+        onClick={() => handler(framework.uniqueNumber)}
         className={'transform-preserve'}
       >
         <motion.div
           variants={flipVariants}
           animate={
-            currentFrameworkUniqueNumber === uniqueNumber ? 'flip' : 'neutral'
+            currentFrameworkUniqueNumber === framework.uniqueNumber
+              ? 'flip'
+              : 'neutral'
           }
           className={`relative transform-preserve p-4 framework--card ${
-            currentFrameworkUniqueNumber === uniqueNumber
+            currentFrameworkUniqueNumber === framework.uniqueNumber
               ? 'border-red-400'
               : 'border-indigo-400'
           }`}
         >
           <div className={`framework--card__front  `}>
             <Image
-              src={image}
-              alt={name}
+              src={framework.image}
+              alt={framework.name}
               className={'max-w-[48px] lg:max-w-[64px]'}
               sizes="(max-width: 1024px) 48px,
                           64px"
@@ -60,7 +59,7 @@ export default function Framework({
             />
           </div>
           <div className={'framework--card__back text-xs md:text-sm'}>
-            {name}
+            {framework.name}
           </div>
         </motion.div>
       </div>
