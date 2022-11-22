@@ -3,15 +3,9 @@ import InfiniteLoop from '../../InfiniteLoop';
 import Link from 'next/link';
 import Image from 'next/image';
 import Card from './Card';
+import { ProjectObject } from '../../../lib/types';
 
-type Props = {
-  link: string;
-  image: any;
-  technology: any[];
-  title: string;
-};
-
-export default function Project({ image, title, technology }: Props) {
+export default function Project({ image, title, technology }: ProjectObject) {
   return (
     <>
       <div

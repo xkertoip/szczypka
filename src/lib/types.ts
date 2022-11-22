@@ -25,3 +25,10 @@ export interface FrameworkObject {
   name: string;
   uniqueNumber: number;
 }
+
+export interface ProjectObject {
+  title: string;
+  image: StaticImageData;
+  link: string;
+  technology: string[];
+}

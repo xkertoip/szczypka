@@ -4,8 +4,9 @@ import bierowiec from '/public/images/projects/Bierowiec.jpg';
 import amnis from '/public/images/projects/AmnisCode.jpg';
 import amnisBlog from '/public/images/projects/AmnisBlog.jpg';
 import folio from '/public/images/projects/folio.jpg';
+import { ProjectObject } from '../../lib/types';
 
-const cards = [
+const cards: ProjectObject[] = [
   {
     title: 'folio',
     image: folio,

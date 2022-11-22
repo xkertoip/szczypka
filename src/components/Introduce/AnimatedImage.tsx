@@ -9,7 +9,8 @@ export default function AnimatedImage() {
           'absolute left-0 -top-8  translate-x-[-50%] w-[50vw] sm:max-w-[350px] rotate-[15deg] z-[-1]'
         }
       >
-        <div className={'section--image__card'}>
+        <div className={'relative h-fit  z-[-1]'}>
+          <div className={'section--image__card'} />
           <div className={' m-auto section--image__background'}>
             <Image
               src={introduce}
