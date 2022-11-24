@@ -9,14 +9,13 @@ export default function Description() {
       <span className={'underline capitalize'}>react</span> /{' '}
       <span className={'underline capitalize'}>creative</span> Developer, you
       name it. Lucky owner of 4 legs beast called Bobik.{' '}
-      <Link
-        href={'#about'}
+      <button
         className={
           'underline  text-indigo-400 hover:text-red-400 duration-700 '
         }
       >
         Let&apos;s meet
-      </Link>
+      </button>
       !
     </p>
   );

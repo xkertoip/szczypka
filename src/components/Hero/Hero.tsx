@@ -26,7 +26,7 @@ export default function Hero() {
               <button
                 className={'btn-primary btn-primary__before btn-primary__after'}
               >
-                <a href={'#about'}>Portfolio</a>
+                <button>Portfolio</button>
               </button>
             </div>
           </div>
