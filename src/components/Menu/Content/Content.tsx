@@ -27,10 +27,6 @@ const routes = [
     name: 'home'
   },
   {
-    slug: '/about',
-    name: 'about'
-  },
-  {
     slug: '/contact',
     name: 'contact'
   }
