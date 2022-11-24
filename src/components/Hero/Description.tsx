@@ -10,7 +10,7 @@ export default function Description() {
       <span className={'underline capitalize'}>creative</span> Developer, you
       name it. Lucky owner of 4 legs beast called Bobik.{' '}
       <Link
-        href={'/about'}
+        href={'#about'}
         className={
           'underline  text-indigo-400 hover:text-red-400 duration-700 '
         }
