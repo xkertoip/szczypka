@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SocialMedia from './SocialMedia';
 import Title from './Title';
 import AnimatedImage from './AnimatedImage';
@@ -16,19 +15,8 @@ export default function Hero() {
           <div className={'sm:order-2'}>
             <Title />
           </div>
-
           <div className={'sm:order-1 max-w-[350px] space-y-8'}>
             <Description />
-            <div className={'flex justify-end gap-12 items-center '}>
-              <Link href={'/contact'} className={'link-primary'}>
-                Hire me
-              </Link>
-              <button
-                className={'btn-primary btn-primary__before btn-primary__after'}
-              >
-                <button>Portfolio</button>
-              </button>
-            </div>
           </div>
         </div>
       </div>

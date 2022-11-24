@@ -15,9 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${lora.variable} font-sans`}>
-      <Head>
-        <title>Piotr Szczypka - Creative Dev</title>
-      </Head>
+      <Head />
       <body>
         <Menu />
         {children}

@@ -1,17 +1,15 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
-type Props = {
-  children: ReactNode;
-};
-export default function Head({ children }: Props) {
+export default function Head() {
   return (
     <>
-      {children}
-
+      <title>Piotr Szczypka - Creative Dev</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/apple-touch-icon.png"
+        // @ts-ignore
+        precedence={'default'}
       />
 
       <link
@@ -19,15 +17,30 @@ export default function Head({ children }: Props) {
         type="image/png"
         sizes="32x32"
         href="/favicon-32x32.png"
+        // @ts-ignore
+        precedence={'default'}
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
         href="/favicon-16x16.png"
+        // @ts-ignore
+        precedence={'default'}
       />
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      <link
+        rel="manifest"
+        href="/site.webmanifest"
+        // @ts-ignore
+        precedence={'default'}
+      />
+      <link
+        rel="mask-icon"
+        href="/safari-pinned-tab.svg"
+        color="#5bbad5"
+        // @ts-ignore
+        precedence={'default'}
+      />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
       <meta

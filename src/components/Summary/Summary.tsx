@@ -1,5 +1,4 @@
 import SectionTitle from '../SectionTitle';
-import Perspective3d from '../Perspective3d';
 import Link from 'next/link';
 export default function Summary() {
   return (
@@ -11,26 +10,25 @@ export default function Summary() {
         indicatorNumber={6}
       />
       <div className={'section-container py-12'}>
-        <Perspective3d width={350} height={300}>
-          <div
+        {/* // perspective*/}
+        <div
+          className={
+            'grid p-8 items-center justify-center drop-shadow-3xl rounded-3xl hover:drop-shadow-4xl bg-zinc-800'
+          }
+        >
+          <p className={'text-2xl pb-8'}>
+            If you are intrested colaboration, just let me know
+          </p>
+
+          <Link
+            href={'/contact'}
             className={
-              'grid p-8 items-center justify-center drop-shadow-3xl rounded-3xl hover:drop-shadow-4xl bg-zinc-800'
+              'btn-primary btn-primary__before btn-primary__after mx-auto'
             }
           >
-            <p className={'text-2xl pb-8'}>
-              If you are intrested colaboration, just let me know
-            </p>
-
-            <Link
-              href={'/contact'}
-              className={
-                'btn-primary btn-primary__before btn-primary__after mx-auto'
-              }
-            >
-              Message
-            </Link>
-          </div>
-        </Perspective3d>
+            Message
+          </Link>
+        </div>
       </div>
     </>
   );

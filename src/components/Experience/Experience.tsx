@@ -32,6 +32,17 @@ const workplaces: WorkplaceObject[] = [
   }
 ];
 
+const Workplaces = workplaces.map(({ time, job, description, image, name }) => (
+  <Workplace
+    image={image}
+    time={time}
+    description={description}
+    job={job}
+    name={name}
+    key={job}
+  />
+));
+
 export default function Experience() {
   return (
     <>
@@ -48,16 +59,7 @@ export default function Experience() {
           'flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  sm:overflow-x-hidden section-container sm:w-full justify-between space-x-8 lg:space-x-16'
         }
       >
-        {workplaces.map(({ time, job, description, image, name }) => (
-          <Workplace
-            image={image}
-            time={time}
-            description={description}
-            job={job}
-            name={name}
-            key={job}
-          />
-        ))}
+        {Workplaces}
       </div>
     </>
   );
