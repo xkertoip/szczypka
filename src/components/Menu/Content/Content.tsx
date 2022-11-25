@@ -5,14 +5,12 @@ import { usePathname } from 'next/navigation';
 
 const item = {
   close: {
-    opacity: 0,
     translateY: '100%',
     transition: {
       ease: 'linear'
     }
   },
   open: {
-    opacity: 1,
     translateY: 0,
     transition: {
       ease: 'linear'
