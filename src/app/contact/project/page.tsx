@@ -4,7 +4,7 @@ import Step from '../../../components/Step';
 export default function Project() {
   return (
     <>
-      <div className={'flex gap-8 justify-between'}>
+      <div className={'flex gap-4 justify-between'}>
         <Stepper />
         <div className={'relative grow flex justify-center'}>
           <Step />

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import FancyButton from '../FancyButton';
 export default function Description() {
   return (
     <>
@@ -22,11 +22,9 @@ export default function Description() {
         <Link href={'/contact'} className={'link-primary whitespace-nowrap'}>
           Hire me
         </Link>
-        <button
-          className={'btn-primary btn-primary__before btn-primary__after'}
-        >
-          Portfolio
-        </button>
+        <a href={'/CV21.pdf'} download={'CV_Piotr_Szczypka.pdf'}>
+          <FancyButton>Portfolio</FancyButton>
+        </a>
       </div>
     </>
   );

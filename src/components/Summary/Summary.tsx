@@ -1,6 +1,7 @@
 import SectionTitle from '../SectionTitle';
 import Link from 'next/link';
 import Perspective3d from '../Perspective3d';
+import FancyButton from '../FancyButton';
 export default function Summary() {
   return (
     <>
@@ -21,13 +22,8 @@ export default function Summary() {
               If you are intrested colaboration, just let me know
             </p>
 
-            <Link
-              href={'/contact'}
-              className={
-                'btn-primary btn-primary__before btn-primary__after mx-auto'
-              }
-            >
-              Message
+            <Link href={'/contact'} className={'w-fit mx-auto'}>
+              <FancyButton>Message</FancyButton>
             </Link>
           </div>
         </Perspective3d>

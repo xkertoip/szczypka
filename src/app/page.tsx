@@ -23,7 +23,7 @@ export default function Home() {
         <section className={'lg:max-w-[1170px] mx-auto'}>
           <Experience />
         </section>
-        {/*        <section
+        <section
           className={'section-container relative lg:max-w-[1170px] mx-auto'}
         >
           <Skill />
@@ -32,15 +32,15 @@ export default function Home() {
           className={'section-container relative lg:max-w-[1170px] mx-auto'}
         >
           <Work />
-        </section>*/}
+        </section>
 
-        {/*        <section
+        <section
           className={
             'section-container overflow-hidden lg:max-w-[1170px] mx-auto'
           }
         >
           <Summary />
-        </section>*/}
+        </section>
       </div>
       <footer className={'lg:max-w-[1170px] mx-auto'}>
         <Footer />

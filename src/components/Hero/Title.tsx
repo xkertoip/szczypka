@@ -1,3 +1,5 @@
+import AnimatedLetter from '../AnimatedLetter';
+
 export default function Title() {
   return (
     <>
@@ -21,14 +23,14 @@ export default function Title() {
         </span>
       </h1>
       <h1 className={'title-big text-right whitespace-nowrap '}>
-        <span className={'letter-animate__odd'}>S</span>
-        <span className={'letter-animate__even'}>z</span>
-        <span className={'letter-animate__odd'}>c</span>
-        <span className={'letter-animate__even'}>z</span>
-        <span className={'letter-animate__odd'}>y</span>
-        <span className={'letter-animate__even'}>p</span>
-        <span className={'letter-animate__odd'}>k</span>
-        <span className={'letter-animate__even'}>a</span>
+        <AnimatedLetter>S</AnimatedLetter>
+        <AnimatedLetter>z</AnimatedLetter>
+        <AnimatedLetter>c</AnimatedLetter>
+        <AnimatedLetter>z</AnimatedLetter>
+        <AnimatedLetter>y</AnimatedLetter>
+        <AnimatedLetter>p</AnimatedLetter>
+        <AnimatedLetter>k</AnimatedLetter>
+        <AnimatedLetter>a</AnimatedLetter>
       </h1>
     </>
   );

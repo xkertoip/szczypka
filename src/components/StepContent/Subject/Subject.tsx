@@ -3,14 +3,12 @@ import { useContext } from 'react';
 import { ContactContext } from '../../../context/ContactContext';
 import { ProjectSubjects } from '../../../lib/types';
 
-import workImage from '../../../../public/images/contact/work.jpg';
-import projectImage from '../../../../public/images/contact/project.jpg';
-import hiImage from '../../../../public/images/contact/sea.jpg';
+import FancyButton from '../../FancyButton';
 
 const subjects: ProjectSubjects[] = [
-  { slug: 'website', name: 'Website', image: workImage },
-  { slug: 'mobile', name: 'Mobile App', image: projectImage },
-  { slug: 'invasion', name: 'World Invasion', image: hiImage }
+  { slug: 'website', name: 'Website' },
+  { slug: 'mobile', name: 'Mobile App' },
+  { slug: 'invasion', name: 'World Invasion' }
 ];
 
 export default function Subject() {
@@ -19,19 +17,10 @@ export default function Subject() {
   return (
     <>
       <div className={' grid gap-8'}>
-        {subjects.map(({ name, slug, image }) => (
-          /*  <div key={name} onClick={() => setProjectSubject(slug)}>
-            <ContactPickerCard slug={slug} name={name} image={image} />
-          </div>*/
-          <button
-            key={name}
-            onClick={() => setProjectSubject(slug)}
-            className={
-              'btn-primary__before btn-primary btn-primary__after mx-auto'
-            }
-          >
+        {subjects.map(({ name, slug }) => (
+          <FancyButton key={name} onClick={() => setProjectSubject(slug)}>
             {name}
-          </button>
+          </FancyButton>
         ))}
       </div>
     </>

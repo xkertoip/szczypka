@@ -9,7 +9,7 @@ export interface ContactRoutes {
 export interface ProjectSubjects {
   name: string;
   slug: 'website' | 'mobile' | 'invasion';
-  image: StaticImageData;
+  image?: StaticImageData;
 }
 
 export interface WorkplaceObject {

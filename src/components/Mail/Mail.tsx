@@ -4,6 +4,7 @@ import { Form, Field, Formik } from 'formik';
 import { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ContactContext } from '../../context/ContactContext';
+import FancyButton from '../FancyButton';
 
 const wrapper = {
   in: {
@@ -86,12 +87,7 @@ export default function Mail() {
             />
 
             <div className={'text-right'}>
-              <button
-                className={'btn-primary btn-primary__before btn-primary__after'}
-                type={'submit'}
-              >
-                Send
-              </button>
+              <FancyButton type={'submit'}>Send</FancyButton>
             </div>
           </Form>
         </Formik>

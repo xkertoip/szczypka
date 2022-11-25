@@ -1,3 +1,5 @@
+import FancyButton from '../FancyButton';
+
 export default function Description() {
   return (
     <>
@@ -11,13 +13,9 @@ export default function Description() {
       <p className={'text-right pb-8'}>
         You will find my resume attached below.
       </p>
-      <button
-        className={
-          'btn-primary btn-primary__before btn-primary__after flex ml-auto'
-        }
-      >
-        <a href={'#about'}>Resume</a>
-      </button>
+      <a href={'/CV21.pdf'} download={'CV_Piotr_Szczypka.pdf'}>
+        <FancyButton>Portfolio</FancyButton>
+      </a>
     </>
   );
 }

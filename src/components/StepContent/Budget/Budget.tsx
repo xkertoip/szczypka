@@ -2,6 +2,7 @@
 
 import { ChangeEvent, useCallback, useContext, useState } from 'react';
 import { ContactContext } from '../../../context/ContactContext';
+import FancyButton from '../../FancyButton';
 
 export default function Budget() {
   const { setBudget, mailInfo } = useContext(ContactContext);
@@ -18,8 +19,8 @@ export default function Budget() {
   return (
     <>
       <h2 className={' text-2xl pb-8'}>How much do you want to invest:</h2>
-      <div className={'text-indigo-400 text-right'}>
-        <span className={'text-2xl pb-8'}>{value}</span>
+      <div className={'text-indigo-400'}>
+        <span className={'text-2xl mb-4'}>{value}</span>
 
         <input
           type={'range'}
@@ -27,16 +28,17 @@ export default function Budget() {
           max={'40000'}
           value={value}
           onChange={handleBudget}
-          className={'w-full caret-red-400 bg-transparent'}
+          className={'w-full caret-red-400 bg-transparent mb-8'}
         />
-        <button
-          className={'btn-primary btn-primary__after btn-primary__before'}
-          onClick={() => {
-            setBudget(value);
-          }}
-        >
-          Confirm
-        </button>
+        <div className={'text-center'}>
+          <FancyButton
+            onClick={() => {
+              setBudget(value);
+            }}
+          >
+            Confirm
+          </FancyButton>
+        </div>
       </div>
     </>
   );
