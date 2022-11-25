@@ -1,6 +1,7 @@
+'use client';
 import introduce from '/public/images/rsz_hero.jpg';
 import Image from 'next/image';
-
+import { motion } from 'framer-motion';
 export default function AnimatedImage() {
   return (
     <div className={'relative basis-1/3'}>
@@ -9,8 +10,16 @@ export default function AnimatedImage() {
           'absolute left-0 -top-8  translate-x-[-50%] w-[50vw] sm:max-w-[350px] rotate-[15deg] z-[-1]'
         }
       >
-        <div className={'relative h-fit  z-[-1]'}>
-          <div className={'section--image__card'} />
+        <div className={'relative h-fit z-[-1]'}>
+          <motion.div
+            className={'section--image__card'}
+            animate={{ rotate: [-15, -10, -15] }}
+            transition={{
+              duration: 5,
+              ease: 'easeInOut',
+              repeat: Infinity
+            }}
+          />
           <div className={' m-auto section--image__background'}>
             <Image
               src={introduce}

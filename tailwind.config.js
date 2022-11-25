@@ -52,22 +52,6 @@ module.exports = {
         '4xl': '5px 7px 14px rgba(129, 140, 248, 0.4)'
       },
       keyframes: {
-        move: {
-          '0%, 100%': {
-            transform: 'translateX(-10px)'
-          },
-          '50%': {
-            transform: 'translateX(0)'
-          }
-        },
-        wiggle: {
-          '0, 100%': {
-            transform: 'rotate(0)'
-          },
-          '50%': {
-            transform: 'rotate(-10deg)'
-          }
-        },
         wiggleReverse: {
           '0, 100%': {
             transform: 'rotate(-15deg)'
@@ -108,8 +92,6 @@ module.exports = {
         }
       },
       animation: {
-        move: 'move 5s ease-in-out infinite',
-        wiggle: 'wiggle 5s ease-in-out infinite',
         wiggleReverse: 'wiggleReverse 3s ease-in-out infinite',
         wiggleBg: 'wiggleBg 5s ease-in-out infinite',
         letterWiggle: 'letterWiggle 0.3s ease-in-out',
