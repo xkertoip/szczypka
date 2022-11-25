@@ -1,11 +1,13 @@
 'use client';
 import Image from 'next/image';
 import hero2 from '/public/images/me2_retusz.png';
-import { LazyMotion, m, domAnimation } from 'framer-motion';
+import { LazyMotion, m } from 'framer-motion';
+
+const loadFeatures = () => import('./Features').then(res => res.default);
 export default function AnimatedImage() {
   return (
     <div className={'  my-auto relative h-fit z-[-1]'}>
-      <LazyMotion features={domAnimation}>
+      <LazyMotion features={loadFeatures}>
         <m.div
           className={'main--image__card'}
           animate={{ rotate: [-30, -45, -30] }}
@@ -22,7 +24,7 @@ export default function AnimatedImage() {
         }
       >
         <div className={'main--image__background'} />
-        <LazyMotion features={domAnimation}>
+        <LazyMotion features={loadFeatures}>
           <m.div
             animate={{ x: [0, -10, 0] }}
             transition={{
