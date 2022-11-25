@@ -19,7 +19,9 @@ export default function Introduce() {
           />
           <Description />
         </div>
-        <AnimatedImage />
+        <div className={'relative basis-1/3'}>
+          <AnimatedImage />
+        </div>
       </div>
     </>
   );
