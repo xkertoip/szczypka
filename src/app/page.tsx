@@ -34,13 +34,13 @@ export default function Home() {
           <Work />
         </section>*/}
 
-        <section
+        {/*        <section
           className={
             'section-container overflow-hidden lg:max-w-[1170px] mx-auto'
           }
         >
           <Summary />
-        </section>
+        </section>*/}
       </div>
       <footer className={'lg:max-w-[1170px] mx-auto'}>
         <Footer />

@@ -1,8 +1,8 @@
 'use client';
 import introduce from '/public/images/rsz_hero.jpg';
 import Image from 'next/image';
-import { LazyMotion, m } from 'framer-motion';
-const loadFeatures = () => import('../Hero/Features').then(res => res.default);
+import { motion } from 'framer-motion';
+
 export default function AnimatedImage() {
   return (
     <>
@@ -12,17 +12,15 @@ export default function AnimatedImage() {
         }
       >
         <div className={'relative h-fit z-[-1]'}>
-          <LazyMotion features={loadFeatures}>
-            <m.div
-              className={'section--image__card'}
-              animate={{ rotate: [-15, -10, -15] }}
-              transition={{
-                duration: 5,
-                ease: 'easeInOut',
-                repeat: Infinity
-              }}
-            />
-          </LazyMotion>
+          <motion.div
+            className={'section--image__card'}
+            animate={{ rotate: [-15, -10, -15] }}
+            transition={{
+              duration: 5,
+              ease: 'easeInOut',
+              repeat: Infinity
+            }}
+          />
           <div className={' m-auto section--image__background'}>
             <Image
               src={introduce}
