@@ -7,8 +7,6 @@ interface Mail {
   currentStep?: number;
   projectSubject?: string | undefined;
   budget?: number | undefined;
-  name: string;
-  message: string;
 }
 
 type ContactContextType = {
@@ -24,7 +22,7 @@ export const ContactContext = createContext<ContactContextType>({
   setProjectSubject: () => {},
   setBudget: () => {},
   setStep: () => {},
-  mailInfo: { name: '', message: '', subject: undefined, currentStep: 0 }
+  mailInfo: { subject: undefined, currentStep: 0 }
 });
 type Props = {
   children: ReactNode;
@@ -32,8 +30,6 @@ type Props = {
 
 export function ContactProvider({ children }: Props) {
   const [mailInfo, setMailInfo] = useState<Mail>({
-    name: '',
-    message: '',
     subject: undefined,
     currentStep: 0
   });

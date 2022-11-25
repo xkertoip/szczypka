@@ -43,12 +43,12 @@ export default function Content({ toggleMenu }: Props) {
         </motion.h2>
       </div>
       <nav>
-        <menu className={'overflow-hidden'}>
+        <menu className={'overflow-hidden space-y-4'}>
           {routes.map(({ slug, name }) => (
             <li
               key={name}
               onClick={toggleMenu}
-              className={'overflow-hidden py-2 flex justify-end'}
+              className={'overflow-hidden flex justify-end'}
             >
               <Link href={slug}>
                 <motion.p
