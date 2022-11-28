@@ -50,52 +50,6 @@ module.exports = {
       dropShadow: {
         '3xl': '5px 7px 14px rgba(24, 24, 27, 0.5)',
         '4xl': '5px 7px 14px rgba(129, 140, 248, 0.4)'
-      },
-      keyframes: {
-        wiggleReverse: {
-          '0, 100%': {
-            transform: 'rotate(-15deg)'
-          },
-          '50%': {
-            transform: 'rotate(10deg)'
-          }
-        },
-        wiggleBg: {
-          '0, 100%': {
-            transform: 'rotate(-45deg)'
-          },
-          '50%': {
-            transform: 'rotate(-30deg)'
-          }
-        },
-        letterWiggle: {
-          '0, 100%': {
-            transform: 'scale(1)'
-          },
-          '25%': {
-            transform: 'scaleY(0.8)'
-          },
-          '50%': {
-            transform: 'scaleX(0.8) scaleY(1.1)'
-          },
-          '75%': {
-            transform: 'scaleX(1.05)'
-          }
-        },
-        slideAnimation: {
-          from: {
-            transform: 'translateX(0%)'
-          },
-          to: {
-            transform: 'translateX(-100%)'
-          }
-        }
-      },
-      animation: {
-        wiggleReverse: 'wiggleReverse 3s ease-in-out infinite',
-        wiggleBg: 'wiggleBg 5s ease-in-out infinite',
-        letterWiggle: 'letterWiggle 0.3s ease-in-out',
-        slideAnimation: 'slideAnimation 5s linear infinite'
       }
     }
   },

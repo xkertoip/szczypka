@@ -67,9 +67,5 @@
   *, :before, :after {
     @apply text-zinc-300 lg:text-lg
   }
-  .looper__innerList[data-animate="true"] .looper__listInstance {
-    @apply animate-slideAnimation
-  }
-
 }
 
