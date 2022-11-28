@@ -2,7 +2,8 @@
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
             <loc>https://szczypka.vercel.app/</loc>
-            <lastmod>2022-10-26</lastmod>
+            <loc>https://szczypka.vercel.app/contact</loc>
+            <lastmod>2022-11-28</lastmod>
         </url>
     </urlset>
 </xml>

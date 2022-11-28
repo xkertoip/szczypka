@@ -2,6 +2,7 @@ import SocialMedia from './SocialMedia';
 import Title from './Title';
 import AnimatedImage from './AnimatedImage';
 import Description from './Description';
+
 export default function Hero() {
   return (
     <>

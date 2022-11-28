@@ -1,8 +1,8 @@
 'use client';
 import ContactSubject from '../../components/ContactPickerCard';
-import workImage from '../../../public/images/contact/work.jpg';
-import projectImage from '../../../public/images/contact/project.jpg';
-import hiImage from '../../../public/images/contact/sea.jpg';
+import workImage from '../../../public/images/contact/images/work.jpg';
+import projectImage from '../../../public/images/contact/images/project.jpg';
+import hiImage from '../../../public/images/contact/images/sea.jpg';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { ContactContext } from '../../context/ContactContext';

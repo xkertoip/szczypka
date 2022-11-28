@@ -10,7 +10,6 @@ type Props = {
 const variants = {
   initial: {
     x: '100%',
-
     opacity: 0
   },
   animate: {
