@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+'use client';
+import { m } from 'framer-motion';
 
 const variantsStickFirst = {
   open: {
@@ -36,7 +37,7 @@ type Props = {
 };
 export default function Hamburger({ toggle, toggleMenu }: Props) {
   return (
-    <motion.button
+    <m.button
       onClick={toggleMenu}
       animate={toggle ? 'open' : 'close'}
       variants={variantsHamburger}
@@ -49,15 +50,15 @@ export default function Hamburger({ toggle, toggleMenu }: Props) {
       }
     >
       <div className={'relative w-3 h-6 flex m-auto '}>
-        <motion.span
+        <m.span
           variants={variantsStickFirst}
           className={'top-0 h-full absolute w-1 left-0 bg-zinc-800'}
         />
-        <motion.span
+        <m.span
           variants={variantsStickLast}
           className={'top-0 h-full absolute w-1 right-0 bg-zinc-800'}
         />
       </div>
-    </motion.button>
+    </m.button>
   );
 }

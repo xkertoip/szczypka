@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 type Props = {
   children: ReactNode;
@@ -44,7 +44,7 @@ const variantsBackground = {
 export default function Wrapper({ children, toggle }: Props) {
   return (
     <>
-      <motion.div
+      <m.div
         className={
           'fixed bottom-0 left-0 w-full  h-screen origin-right bg-zinc-800/90 z-10 '
         }
@@ -55,7 +55,7 @@ export default function Wrapper({ children, toggle }: Props) {
           duration: 0.3
         }}
       >
-        <motion.div
+        <m.div
           variants={variantsContainer}
           className={
             'fixed left-0 bottom-0 w-full min-h-screen origin-right bg-zinc-800/80 pl-4 pr-12 sm:px-16 py-16 flex'
@@ -68,8 +68,8 @@ export default function Wrapper({ children, toggle }: Props) {
           >
             {children}
           </div>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </>
   );
 }

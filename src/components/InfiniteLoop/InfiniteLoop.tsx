@@ -1,8 +1,17 @@
 'use client';
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-
+import { m } from 'framer-motion';
 type Props = {
   children: ReactNode;
+};
+
+const variants = {
+  initial: {
+    x: 0
+  },
+  animate: {
+    x: '-100%'
+  }
 };
 
 export default function InfiniteLoop({ children }: Props) {
@@ -42,15 +51,23 @@ export default function InfiniteLoop({ children }: Props) {
       <div ref={outerRef} className={'w-full overflow-hidden'}>
         <div
           ref={innerRef}
-          className={'flex justify-center w-fit looper__innerList'}
+          className={'flex justify-center w-fit border-b border-indigo-400'}
         >
           {[...Array(loopElement)].map((_, index) => (
-            <div
+            <m.div
               key={index}
-              className={'flex w-max animate-none looper__listInstance'}
+              className={'flex w-max'}
+              variants={variants}
+              initial={'initial'}
+              animate={'animate'}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: 'linear'
+              }}
             >
               {children}
-            </div>
+            </m.div>
           ))}
         </div>
       </div>

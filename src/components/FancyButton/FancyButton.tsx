@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ButtonHTMLAttributes } from 'react';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & { type?: 'submit' };
@@ -27,7 +27,7 @@ const spanAfterVariants = {
 };
 export default function FancyButton({ children, type, ...props }: Props) {
   return (
-    <motion.div variants={variants} whileHover={'hover'} initial={'initial'}>
+    <m.div variants={variants} whileHover={'hover'} initial={'initial'}>
       <button
         {...props}
         type={type || 'button'}
@@ -36,17 +36,17 @@ export default function FancyButton({ children, type, ...props }: Props) {
         }
       >
         {children}
-        <motion.span
+        <m.span
           variants={spanBeforeVariants}
           transition={{ duration: 0.6, ease: 'easeInOut' }}
           className={'h-px absolute w-full top-0 left-0  bg-indigo-400'}
         />
-        <motion.span
+        <m.span
           variants={spanAfterVariants}
           transition={{ duration: 0.6, ease: 'easeInOut' }}
           className={'h-px absolute w-full top-0 left-0  bg-red-400'}
         />
       </button>
-    </motion.div>
+    </m.div>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 import introduce from '/public/images/rsz_hero.jpg';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export default function AnimatedImage() {
   return (
@@ -12,7 +12,7 @@ export default function AnimatedImage() {
         }
       >
         <div className={'relative h-fit z-[-1]'}>
-          <motion.div
+          <m.div
             className={'section--image__card'}
             animate={{ rotate: [-15, -10, -15] }}
             transition={{

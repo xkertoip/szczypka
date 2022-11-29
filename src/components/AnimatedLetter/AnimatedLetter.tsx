@@ -1,6 +1,6 @@
 'use client';
 import { ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 type Props = {
   children: ReactNode;
@@ -17,12 +17,12 @@ const variants = {
 };
 export default function AnimatedLetter({ children }: Props) {
   return (
-    <motion.span
+    <m.span
       variants={variants}
       whileHover={'hover'}
       className={'letter-animate'}
     >
       {children}
-    </motion.span>
+    </m.span>
   );
 }

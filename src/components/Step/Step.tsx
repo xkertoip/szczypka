@@ -2,7 +2,7 @@
 
 import { useContext } from 'react';
 import { ContactContext } from '../../context/ContactContext';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 import { Budget, Subject } from '../StepContent';
 import Mail from '../Mail';
 
@@ -44,7 +44,7 @@ export default function Step() {
   return (
     <>
       <AnimatePresence>
-        <motion.div
+        <m.div
           key={currentStep}
           variants={wrapper}
           exit={'out'}
@@ -53,7 +53,7 @@ export default function Step() {
           className={'absolute mx-auto w-full'}
         >
           {currentStepContent}
-        </motion.div>
+        </m.div>
       </AnimatePresence>
     </>
   );

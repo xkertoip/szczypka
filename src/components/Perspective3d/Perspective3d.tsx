@@ -1,5 +1,5 @@
 'use client';
-import { useMotionValue, useTransform, motion } from 'framer-motion';
+import { useMotionValue, useTransform, m } from 'framer-motion';
 import React, { ReactNode, useRef } from 'react';
 
 type Props = {
@@ -29,7 +29,7 @@ export default function Perspective3d({ children, height, width }: Props) {
   const rotateY = useTransform(x, [0, width], [-10, 10]);
 
   return (
-    <motion.div
+    <m.div
       onMouseMove={handlePosition}
       onMouseLeave={handleLeave}
       className={'perspective-3d mx-auto w-full'}
@@ -38,7 +38,7 @@ export default function Perspective3d({ children, height, width }: Props) {
         maxHeight: height
       }}
     >
-      <motion.div
+      <m.div
         ref={elementRef}
         style={{
           rotateX,
@@ -51,7 +51,7 @@ export default function Perspective3d({ children, height, width }: Props) {
         className={'transform-preserve w-full duration-500 ease-linear h-full'}
       >
         {children}
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 }

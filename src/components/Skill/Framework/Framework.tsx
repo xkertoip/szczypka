@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+'use client';
+import { m } from 'framer-motion';
 import Image from 'next/image';
 import { FrameworkObject } from '../../../lib/types';
 
@@ -35,7 +36,7 @@ export default function Framework({
         onClick={() => handler(framework.uniqueNumber)}
         className={'transform-preserve'}
       >
-        <motion.div
+        <m.div
           variants={flipVariants}
           animate={
             currentFrameworkUniqueNumber === framework.uniqueNumber
@@ -59,7 +60,7 @@ export default function Framework({
           <div className={'framework--card__back text-xs md:text-sm'}>
             {framework.name}
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </>
   );

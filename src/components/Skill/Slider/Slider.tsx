@@ -1,4 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
+'use client';
+import { AnimatePresence, m } from 'framer-motion';
 import Image from 'next/image';
 
 type Props = {
@@ -26,7 +27,7 @@ export default function Slider({ logo, name, number }: Props) {
   return (
     <div className={'absolute w-full h-full'}>
       <AnimatePresence>
-        <motion.div
+        <m.div
           key={number}
           className={'absolute w-full h-full grid items-center p-4 sm:p-8'}
           variants={variants}
@@ -48,7 +49,7 @@ export default function Slider({ logo, name, number }: Props) {
               {name}
             </h2>
           </div>
-        </motion.div>
+        </m.div>
       </AnimatePresence>
     </div>
   );

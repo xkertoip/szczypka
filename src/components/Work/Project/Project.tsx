@@ -17,7 +17,7 @@ export default function Project({ image, title, technology }: ProjectObject) {
           </Card>
         </Link>
         <InfiniteLoop>
-          <h4 className={'flex text-secondary pt-8 border-b border-indigo-400'}>
+          <h4 className={'flex text-secondary pt-8'}>
             {technology.map(element => (
               <span
                 className={'mr-4 whitespace-nowrap capitalize text-xl'}

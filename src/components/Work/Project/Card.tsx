@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ReactNode } from 'react';
 import Perspective3d from '../../Perspective3d';
 
@@ -38,22 +38,18 @@ export default function Card({ children, maxWidth, maxHeight }: Props) {
   return (
     <>
       <Perspective3d width={maxWidth} height={maxHeight}>
-        <motion.div
-          initial={'hidden'}
-          whileHover={'show'}
-          className={'work--card'}
-        >
-          <motion.div
+        <m.div initial={'hidden'} whileHover={'show'} className={'work--card'}>
+          <m.div
             className={'relative h-auto z-[-1] rounded-3xl'}
             variants={wrapper}
             transition={{ duration: 0.7 }}
           >
             {children}
-          </motion.div>
-          <motion.div variants={button} className={'work--card__btn'}>
+          </m.div>
+          <m.div variants={button} className={'work--card__btn'}>
             <button className={'capitalize text-zinc-800'}>check</button>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </Perspective3d>
     </>
   );

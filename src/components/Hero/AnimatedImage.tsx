@@ -1,12 +1,12 @@
 'use client';
 import Image from 'next/image';
 import hero2 from '/public/images/me2_retusz.png';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export default function AnimatedImage() {
   return (
     <div className={'  my-auto relative h-fit z-[-1]'}>
-      <motion.div
+      <m.div
         className={'main--image__card'}
         animate={{ rotate: [-30, -45, -30] }}
         transition={{
@@ -23,7 +23,7 @@ export default function AnimatedImage() {
       >
         <div className={'main--image__background'} />
 
-        <motion.div
+        <m.div
           animate={{ x: [0, -10, 0] }}
           transition={{
             duration: 5,
@@ -38,7 +38,7 @@ export default function AnimatedImage() {
             placeholder={'blur'}
             className={'max-w-[150px] sm:max-w-[250px]'}
           />
-        </motion.div>
+        </m.div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -38,9 +38,9 @@ export default function Content({ toggleMenu }: Props) {
   return (
     <>
       <div className={'overflow-hidden'}>
-        <motion.h2 variants={item} className={'section-indicator'}>
+        <m.h2 variants={item} className={'section-indicator'}>
           N&#176;0&nbsp;menu
-        </motion.h2>
+        </m.h2>
       </div>
       <nav>
         <menu className={'overflow-hidden space-y-4'}>
@@ -51,14 +51,14 @@ export default function Content({ toggleMenu }: Props) {
               className={'overflow-hidden flex justify-end'}
             >
               <Link href={slug}>
-                <motion.p
+                <m.p
                   className={`text-4xl md:text-6xl ease-in-out duration-700 capitalize hover:text-indigo-400 ${
                     slug === pathname && 'text-red-400'
                   }`}
                   variants={item}
                 >
                   {name}
-                </motion.p>
+                </m.p>
               </Link>
             </li>
           ))}
@@ -66,17 +66,17 @@ export default function Content({ toggleMenu }: Props) {
       </nav>
       <ul className={'pb-4  md:text-2xl'}>
         <li className={'overflow-hidden '}>
-          <motion.p variants={item}>Kasinka Mała, 648</motion.p>
+          <m.p variants={item}>Kasinka Mała, 648</m.p>
         </li>
         <li className={'overflow-hidden'}>
-          <motion.p variants={item}>
-            <motion.a href="tel:+48536777364" className={'hover:text-red-400'}>
+          <m.p variants={item}>
+            <m.a href="tel:+48536777364" className={'hover:text-red-400'}>
               +48 536 777 364
-            </motion.a>
-          </motion.p>
+            </m.a>
+          </m.p>
         </li>
         <li className={'overflow-hidden'}>
-          <motion.p variants={item}> Poland</motion.p>
+          <m.p variants={item}> Poland</m.p>
         </li>
       </ul>
     </>
