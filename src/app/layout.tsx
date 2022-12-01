@@ -1,12 +1,12 @@
 import './globals.css';
 import { ReactNode } from 'react';
 import Head from './head';
-import { Lora } from '@next/font/google';
+import localFont from '@next/font/local';
 import Menu from '../components/Menu';
 import Providers from './providers';
 
-const lora = Lora({
-  variable: '--font-inter'
+const myFont = localFont({
+  src: './fonts/Lora.ttf'
 });
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className={`${lora.variable} font-sans`}>
+    <html lang="en" className={myFont.className}>
       <Head />
       <body>
         <Providers>

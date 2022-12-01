@@ -8,8 +8,6 @@ export default function Head() {
         rel="apple-touch-icon"
         sizes="180x180"
         href="/apple-touch-icon.png"
-        // @ts-ignore
-        precedence={'default'}
       />
 
       <link
@@ -17,27 +15,18 @@ export default function Head() {
         type="image/png"
         sizes="32x32"
         href="/favicon-32x32.png"
-        // @ts-ignore
-        precedence={'default'}
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
         href="/favicon-16x16.png"
-        // @ts-ignore
-        precedence={'default'}
       />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       <link
-        rel="manifest"
-        href="/site.webmanifest"
-        // @ts-ignore
-        precedence={'default'}
-      />
-      <link
-        rel="mask-icon"
-        href="/safari-pinned-tab.svg"
-        color="#5bbad5"
+        rel={'stylesheet'}
+        href={'/globals.css'}
         // @ts-ignore
         precedence={'default'}
       />
