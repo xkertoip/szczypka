@@ -11,6 +11,14 @@ export default function Content() {
     array: frameworks,
     max: frameworks.length
   });
+  const displayFrameworks = frameworks.map(framework => (
+    <Framework
+      framework={framework}
+      handler={handleClick}
+      currentFrameworkUniqueNumber={currentFramework.uniqueNumber}
+      key={framework.uniqueNumber}
+    />
+  ));
 
   return (
     <>
@@ -32,14 +40,7 @@ export default function Content() {
           'sm:basis-2/3 flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 relative pt-8 sm:pt-0'
         }
       >
-        {frameworks.map(framework => (
-          <Framework
-            framework={framework}
-            handler={handleClick}
-            currentFrameworkUniqueNumber={currentFramework.uniqueNumber}
-            key={framework.uniqueNumber}
-          />
-        ))}
+        {displayFrameworks}
       </div>
     </>
   );
