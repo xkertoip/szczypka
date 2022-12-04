@@ -18,7 +18,7 @@ const item = {
   }
 };
 
-const routes = [
+/*const routes = [
   {
     slug: '/',
     name: 'home'
@@ -27,7 +27,7 @@ const routes = [
     slug: '/contact',
     name: 'contact'
   }
-];
+];*/
 type Props = {
   toggleMenu: () => void;
 };
@@ -44,24 +44,38 @@ export default function Content({ toggleMenu }: Props) {
       </div>
       <nav>
         <menu className={'overflow-hidden space-y-4'}>
-          {routes.map(({ slug, name }) => (
-            <li
-              key={name}
-              onClick={toggleMenu}
-              className={'overflow-hidden flex justify-end'}
-            >
-              <Link href={slug}>
-                <m.p
-                  className={`text-4xl md:text-6xl ease-in-out duration-700 capitalize hover:text-indigo-400 ${
-                    slug === pathname && 'text-red-400'
-                  }`}
-                  variants={item}
-                >
-                  {name}
-                </m.p>
-              </Link>
-            </li>
-          ))}
+          <li
+            onClick={toggleMenu}
+            className={'overflow-hidden flex justify-end'}
+          >
+            <Link href={'/'}>
+              <m.p
+                className={`text-4xl md:text-6xl  capitalize ${
+                  '/' === pathname ? 'text-red-400' : null
+                }`}
+                variants={item}
+                whileHover={{ color: '#818cf8' }}
+              >
+                home
+              </m.p>
+            </Link>
+          </li>
+          <li
+            onClick={toggleMenu}
+            className={'overflow-hidden flex justify-end'}
+          >
+            <Link href={'/contact'}>
+              <m.p
+                className={`text-4xl md:text-6xl capitalize  ${
+                  '/contact' === pathname ? 'text-red-400' : null
+                }`}
+                variants={item}
+                whileHover={{ color: '#818cf8' }}
+              >
+                contact
+              </m.p>
+            </Link>
+          </li>
         </menu>
       </nav>
       <ul className={'pb-4  md:text-2xl'}>
@@ -70,7 +84,7 @@ export default function Content({ toggleMenu }: Props) {
         </li>
         <li className={'overflow-hidden'}>
           <m.p variants={item}>
-            <m.a href="tel:+48536777364" className={'hover:text-red-400'}>
+            <m.a href="tel:+48536777364" whileHover={{ color: '#818cf8' }}>
               +48 536 777 364
             </m.a>
           </m.p>
