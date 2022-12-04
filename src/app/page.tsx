@@ -1,9 +1,9 @@
 import Hero from '../components/Hero/Hero';
 import Introduce from '../components/Introduce';
 import Experience from '../components/Experience';
-import Skill from '../components/Skill';
+/*import Skill from '../components/Skill';
 import Work from '../components/Work';
-import Summary from '../components/Summary';
+import Summary from '../components/Summary';*/
 import Footer from '../components/Footer';
 
 export default function Home() {
