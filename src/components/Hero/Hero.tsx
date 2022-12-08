@@ -1,12 +1,11 @@
 import dynamic from 'next/dynamic';
-
 import SocialMedia from './SocialMedia';
-import Description from './Description';
-import AnimatedImage from './AnimatedImage';
 import Image from 'next/image';
 import hero2 from '/public/images/me2_retusz.png';
 
 const Title = dynamic(() => import('./Title'));
+const Description = dynamic(() => import('./Description'));
+const AnimatedImage = dynamic(() => import('./AnimatedImage'));
 
 export default function Hero() {
   return (
@@ -21,7 +20,6 @@ export default function Hero() {
             className={'max-w-[150px] sm:max-w-[250px]'}
           />
         </AnimatedImage>
-
         <SocialMedia />
       </div>
 

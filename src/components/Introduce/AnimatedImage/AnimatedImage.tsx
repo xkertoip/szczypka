@@ -1,9 +1,13 @@
 'use client';
-import introduce from '/public/images/rsz_hero.jpg';
-import Image from 'next/image';
+import { ReactNode } from 'react';
+
 import { m } from 'framer-motion';
 
-export default function AnimatedImage() {
+type Props = {
+  children: ReactNode;
+};
+
+export default function AnimatedImage({ children }: Props) {
   return (
     <>
       <div
@@ -21,14 +25,7 @@ export default function AnimatedImage() {
               repeat: Infinity
             }}
           />
-          <div className={' m-auto section--image__background'}>
-            <Image
-              src={introduce}
-              alt={'Piotr Szczypka'}
-              placeholder={'blur'}
-              className={'max-w-[50vw] sm:max-w-[350px]'}
-            />
-          </div>
+          <div className={' m-auto section--image__background'}>{children}</div>
         </div>
       </div>
     </>

@@ -1,6 +1,10 @@
 import Description from './Description';
-import AnimatedImage from './AnimatedImage';
 import SectionTitle from '../SectionTitle';
+import dynamic from 'next/dynamic';
+import introduce from '/public/images/rsz_hero.jpg';
+import Image from 'next/image';
+
+const AnimatedImage = dynamic(() => import('./AnimatedImage'));
 
 export default function Introduce() {
   return (
@@ -20,7 +24,14 @@ export default function Introduce() {
           <Description />
         </div>
         <div className={'relative basis-1/3'}>
-          <AnimatedImage />
+          <AnimatedImage>
+            <Image
+              src={introduce}
+              alt={'Piotr Szczypka'}
+              placeholder={'blur'}
+              className={'max-w-[50vw] sm:max-w-[350px]'}
+            />
+          </AnimatedImage>
         </div>
       </div>
     </>
