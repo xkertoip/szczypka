@@ -1,4 +1,6 @@
-import AnimatedLetter from '../AnimatedLetter';
+import dynamic from 'next/dynamic';
+
+const AnimatedLetter = dynamic(() => import('../AnimatedLetter'));
 
 export default function Title() {
   return (

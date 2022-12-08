@@ -1,13 +1,27 @@
+import dynamic from 'next/dynamic';
+
 import SocialMedia from './SocialMedia';
-import Title from './Title';
-import AnimatedImage from './AnimatedImage';
 import Description from './Description';
+import AnimatedImage from './AnimatedImage';
+import Image from 'next/image';
+import hero2 from '/public/images/me2_retusz.png';
+
+const Title = dynamic(() => import('./Title'));
 
 export default function Hero() {
   return (
     <>
       <div className={'flex rotate-[-15deg] gap-4 justify-center pt-8'}>
-        <AnimatedImage />
+        <AnimatedImage>
+          <Image
+            src={hero2}
+            alt={'Piotr Szczypka'}
+            priority
+            placeholder={'blur'}
+            className={'max-w-[150px] sm:max-w-[250px]'}
+          />
+        </AnimatedImage>
+
         <SocialMedia />
       </div>
 
