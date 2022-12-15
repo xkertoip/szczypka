@@ -1,6 +1,7 @@
 'use client';
 import { ReactNode } from 'react';
 import { LazyMotion } from 'framer-motion';
+import { MenuProvider } from '../context/MenuContext/MenuContext';
 
 type Props = {
   children: ReactNode;
@@ -12,7 +13,7 @@ const loadFeatures = () =>
 export default function Providers({ children }: Props) {
   return (
     <LazyMotion features={loadFeatures} strict>
-      {children}
+      <MenuProvider>{children}</MenuProvider>
     </LazyMotion>
   );
 }

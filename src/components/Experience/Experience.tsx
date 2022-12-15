@@ -1,19 +1,6 @@
-import dynamic from 'next/dynamic';
 import SectionTitle from '../SectionTitle';
-import { workplaces } from '../../lib/date';
-
-const Workplace = dynamic(() => import('./Workplace'));
-
-const Workplaces = workplaces.map(({ time, job, description, image, name }) => (
-  <Workplace
-    image={image}
-    time={time}
-    description={description}
-    job={job}
-    name={name}
-    key={job}
-  />
-));
+import Workplaces from './Workplaces';
+import { Suspense } from 'react';
 
 export default function Experience() {
   return (
@@ -26,13 +13,9 @@ export default function Experience() {
           align={'right'}
         />
       </div>
-      <div
-        className={
-          'flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  sm:overflow-x-hidden section-container sm:w-full justify-between space-x-8 lg:space-x-16'
-        }
-      >
-        {Workplaces}
-      </div>
+      <Suspense>
+        <Workplaces />
+      </Suspense>
     </>
   );
 }

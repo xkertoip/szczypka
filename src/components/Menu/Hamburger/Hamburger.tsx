@@ -1,5 +1,7 @@
 'use client';
 import { m } from 'framer-motion';
+import { useContext } from 'react';
+import MenuContext from '../../../context/MenuContext';
 
 const variantsStickFirst = {
   open: {
@@ -31,14 +33,11 @@ const variantsStickLast = {
     rotate: 0
   }
 };
-type Props = {
-  toggle: boolean;
-  toggleMenu: () => void;
-};
-export default function Hamburger({ toggle, toggleMenu }: Props) {
+export default function Hamburger() {
+  const { toggle, changeToggle } = useContext(MenuContext);
   return (
     <m.button
-      onClick={toggleMenu}
+      onClick={changeToggle}
       animate={toggle ? 'open' : 'close'}
       variants={variantsHamburger}
       initial={'initial'}

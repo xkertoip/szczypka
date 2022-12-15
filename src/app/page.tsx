@@ -4,9 +4,10 @@ import Work from '../components/Work';
 import Summary from '../components/Summary';*/
 import Footer from '../components/Footer';
 import dynamic from 'next/dynamic';
+import Experience from '../components/Experience';
 
 const Introduce = dynamic(() => import('../components/Introduce'));
-const Experience = dynamic(() => import('../components/Experience'));
+/*const Experience = dynamic(() => import('../components/Experience'));*/
 
 export default function Home() {
   return (

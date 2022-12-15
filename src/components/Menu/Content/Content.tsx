@@ -1,7 +1,9 @@
+'use client';
 import { m } from 'framer-motion';
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import MenuContext from '../../../context/MenuContext';
 
 const item = {
   close: {
@@ -28,12 +30,10 @@ const item = {
     name: 'contact'
   }
 ];*/
-type Props = {
-  toggleMenu: () => void;
-};
 
-export default function Content({ toggleMenu }: Props) {
+export default function Content() {
   const pathname = usePathname();
+  const { changeToggle } = useContext(MenuContext);
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function Content({ toggleMenu }: Props) {
       <nav>
         <menu className={'overflow-hidden space-y-4'}>
           <li
-            onClick={toggleMenu}
+            onClick={changeToggle}
             className={'overflow-hidden flex justify-end'}
           >
             <Link href={'/'}>
@@ -61,7 +61,7 @@ export default function Content({ toggleMenu }: Props) {
             </Link>
           </li>
           <li
-            onClick={toggleMenu}
+            onClick={changeToggle}
             className={'overflow-hidden flex justify-end'}
           >
             <Link href={'/contact'}>
