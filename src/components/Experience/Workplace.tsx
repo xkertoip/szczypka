@@ -20,13 +20,8 @@ export default function Workplace({
           }
         >
           <div className={'space-y-8 relative'}>
-            <div className={'min-h-[4rem] flex'}>
-              <Image
-                src={image}
-                alt={'Piotr Szczypka'}
-                className={'m-auto'}
-                placeholder={'blur'}
-              />
+            <div className={'min-h-[4rem] flex justify-center'}>
+              <Image src={image} alt={'Piotr Szczypka'} />
             </div>
             <div className={'relative'}>
               <h3 className={'text-right'}>{time}</h3>

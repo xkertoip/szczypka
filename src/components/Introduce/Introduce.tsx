@@ -25,12 +25,9 @@ export default function Introduce() {
         </div>
         <div className={'relative basis-1/3'}>
           <AnimatedImage>
-            <Image
-              src={introduce}
-              alt={'Piotr Szczypka'}
-              placeholder={'blur'}
-              className={'max-w-[50vw] sm:max-w-[350px]'}
-            />
+            <div className={'max-w-[50vw] sm:max-w-[350px]'}>
+              <Image src={introduce} alt={'Piotr Szczypka'} />
+            </div>
           </AnimatedImage>
         </div>
       </div>

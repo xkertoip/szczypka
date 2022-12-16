@@ -12,13 +12,9 @@ export default function Hero() {
     <>
       <div className={'flex rotate-[-15deg] gap-4 justify-center pt-8'}>
         <AnimatedImage>
-          <Image
-            src={hero2}
-            alt={'Piotr Szczypka'}
-            priority
-            placeholder={'blur'}
-            className={'max-w-[150px] sm:max-w-[250px]'}
-          />
+          <div className={'max-w-[150px] sm:max-w-[250px]'}>
+            <Image src={hero2} alt={'Piotr Szczypka'} priority />
+          </div>
         </AnimatedImage>
         <SocialMedia />
       </div>
