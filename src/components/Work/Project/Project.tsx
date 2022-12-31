@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Card from './Card';
 import { ProjectObject } from '../../../lib/types';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 
 const InfiniteLoop = lazy(() => import('../../InfiniteLoop'));
 
@@ -24,19 +24,25 @@ export default function Project({ image, title, technology }: ProjectObject) {
             />
           </Card>
         </Link>
-        <InfiniteLoop>
-          <h4 className={'flex text-secondary pt-8'}>
-            {technology.map(element => (
-              <span
-                className={'mr-4 whitespace-nowrap capitalize text-xl'}
-                key={element}
-              >
-                {element}
-              </span>
-            ))}
-          </h4>
-        </InfiniteLoop>
+        <Suspense fallback={<Loading />}>
+          <InfiniteLoop>
+            <h4 className={'flex text-secondary pt-8'}>
+              {technology.map(element => (
+                <span
+                  className={'mr-4 whitespace-nowrap capitalize text-xl'}
+                  key={element}
+                >
+                  {element}
+                </span>
+              ))}
+            </h4>
+          </InfiniteLoop>
+        </Suspense>
       </div>
     </>
   );
+}
+
+function Loading() {
+  return <p>Loading...</p>;
 }

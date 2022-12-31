@@ -38,7 +38,13 @@ export default function Card({ children, maxWidth, maxHeight }: Props) {
   return (
     <>
       <Perspective3d width={maxWidth} height={maxHeight}>
-        <m.div initial={'hidden'} whileHover={'show'} className={'work--card'}>
+        <m.div
+          initial={'hidden'}
+          whileHover={'show'}
+          className={
+            'relative border-t border-indigo-400 rounded-3xl overflow-hidden drop-shadow-3xl hover:drop-shadow-4xl duration-700'
+          }
+        >
           <m.div
             className={'relative h-auto z-[-1] rounded-3xl'}
             variants={wrapper}
@@ -46,7 +52,12 @@ export default function Card({ children, maxWidth, maxHeight }: Props) {
           >
             {children}
           </m.div>
-          <m.div variants={button} className={'work--card__btn'}>
+          <m.div
+            variants={button}
+            className={
+              'absolute  bg-red-400 top-[50%] left-[50%] w-[70px] h-[70px] rounded-full flex items-center justify-center z-[-1] drop-shadow-xl'
+            }
+          >
             <button className={'capitalize text-zinc-800'}>check</button>
           </m.div>
         </m.div>

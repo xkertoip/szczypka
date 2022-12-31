@@ -1,6 +1,6 @@
 'use client';
 import { useMotionValue, useTransform, m } from 'framer-motion';
-import React, { ReactNode, useRef } from 'react';
+import { ReactNode, useRef, MouseEvent } from 'react';
 
 type Props = {
   children: ReactNode;
@@ -14,7 +14,7 @@ export default function Perspective3d({ children, height, width }: Props) {
   const x = useMotionValue(width / 2);
   const y = useMotionValue(height / 2);
 
-  function handlePosition(e: React.MouseEvent<HTMLDivElement>) {
+  function handlePosition(e: MouseEvent<HTMLDivElement>) {
     const { clientY, clientX } = e;
     const { left, top } = e.currentTarget.getBoundingClientRect();
     x.set(clientX - left);

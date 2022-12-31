@@ -1,7 +1,10 @@
 import SectionTitle from '../SectionTitle';
 import Link from 'next/link';
-import Perspective3d from '../Perspective3d';
 import FancyButton from '../FancyButton';
+
+import { lazy } from 'react';
+
+const Perspective = lazy(() => import('../Perspective3d'));
 export default function Summary() {
   return (
     <>
@@ -12,7 +15,7 @@ export default function Summary() {
         indicatorNumber={6}
       />
       <div className={'section-container py-12'}>
-        <Perspective3d width={350} height={300}>
+        <Perspective width={350} height={300}>
           <div
             className={
               'grid p-8 items-center justify-center drop-shadow-3xl rounded-3xl hover:drop-shadow-4xl bg-zinc-800'
@@ -26,7 +29,7 @@ export default function Summary() {
               <FancyButton>Message</FancyButton>
             </Link>
           </div>
-        </Perspective3d>
+        </Perspective>
       </div>
     </>
   );
