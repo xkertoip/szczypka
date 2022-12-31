@@ -1,5 +1,4 @@
 /*
-import Work from '../components/Work';
 import Summary from '../components/Summary';*/
 import Footer from '../components/Footer';
 import { lazy } from 'react';
@@ -8,6 +7,7 @@ const Hero = lazy(() => import('../components/Hero'));
 const Introduce = lazy(() => import('../components/Introduce'));
 const Experience = lazy(() => import('../components/Experience'));
 const Skill = lazy(() => import('../components/Skill'));
+const Work = lazy(() => import('../components/Work'));
 
 export default function Home() {
   return (
@@ -31,13 +31,13 @@ export default function Home() {
         >
           <Skill />
         </section>
-        {/*
+
         <section
           className={'section-container relative lg:max-w-[1170px] mx-auto'}
         >
           <Work />
         </section>
-
+        {/*
         <section
           className={
             'section-container overflow-hidden lg:max-w-[1170px] mx-auto'

@@ -1,5 +1,6 @@
 import SectionTitle from '../SectionTitle';
-import Project from './Project/Project';
+import { lazy, Suspense } from 'react';
+const Project = lazy(() => import('./Project'));
 
 import { cards } from '../../lib/date';
 
@@ -24,8 +25,12 @@ export default function Work() {
       <div
         className={'py-8 sm:grid sm:grid-cols-2 sm:justify-between sm:gap-8'}
       >
-        {Cards}
+        <Suspense fallback={<Loading />}>{Cards}</Suspense>
       </div>
     </>
   );
+}
+
+function Loading() {
+  return <p>Loading...</p>;
 }

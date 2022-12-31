@@ -2,7 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Card from './Card';
 import { ProjectObject } from '../../../lib/types';
-import InfiniteLoop from '../../InfiniteLoop';
+import { lazy } from 'react';
+
+const InfiniteLoop = lazy(() => import('../../InfiniteLoop'));
 
 export default function Project({ image, title, technology }: ProjectObject) {
   return (
@@ -13,7 +15,13 @@ export default function Project({ image, title, technology }: ProjectObject) {
         <h3 className={'text-3xl pb-4 capitalize text-red-400 '}>{title}</h3>
         <Link href={'/contact'}>
           <Card maxWidth={450} maxHeight={350}>
-            <Image src={image} alt={'Piotr Szczypka'} placeholder={'blur'} />
+            <Image
+              src={image}
+              alt={'Piotr Szczypka'}
+              placeholder={'blur'}
+              width={450}
+              height={350}
+            />
           </Card>
         </Link>
         <InfiniteLoop>
