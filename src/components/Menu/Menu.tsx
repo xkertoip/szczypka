@@ -1,6 +1,8 @@
 import Hamburger from './Hamburger';
 import Wrapper from './Wrapper';
-import Content from './Content';
+import { lazy } from 'react';
+
+const Content = lazy(() => import('./Content'));
 
 export default function Menu() {
   return (

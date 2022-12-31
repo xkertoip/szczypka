@@ -1,11 +1,11 @@
-import dynamic from 'next/dynamic';
+import { lazy } from 'react';
 import SocialMedia from './SocialMedia';
 import Image from 'next/image';
-import hero2 from '/public/images/me2_retusz.png';
+import hero2 from '../../../public/images/me2_retusz.png';
 
-const Title = dynamic(() => import('./Title'));
-const Description = dynamic(() => import('./Description'));
-const AnimatedImage = dynamic(() => import('./AnimatedImage'));
+const Title = lazy(() => import('./Title'));
+const Description = lazy(() => import('./Description'));
+const AnimatedImage = lazy(() => import('./AnimatedImage'));
 
 export default function Hero() {
   return (

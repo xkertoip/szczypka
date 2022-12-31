@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic';
-const AnimatedLetter = dynamic(() => import('../AnimatedLetter'));
+import { lazy, Suspense } from 'react';
+const AnimatedLetter = lazy(() => import('../AnimatedLetter'));
 
 export default function Title() {
   return (
@@ -24,15 +24,29 @@ export default function Title() {
         </span>
       </h1>
       <h1 className={'title-big text-right whitespace-nowrap '}>
-        <AnimatedLetter>S</AnimatedLetter>
-        <AnimatedLetter>z</AnimatedLetter>
-        <AnimatedLetter>c</AnimatedLetter>
-        <AnimatedLetter>z</AnimatedLetter>
-        <AnimatedLetter>y</AnimatedLetter>
-        <AnimatedLetter>p</AnimatedLetter>
-        <AnimatedLetter>k</AnimatedLetter>
-        <AnimatedLetter>a</AnimatedLetter>
+        <Suspense fallback={<LoadingLetter />}>
+          <AnimatedLetter>S</AnimatedLetter>
+          <AnimatedLetter>z</AnimatedLetter>
+          <AnimatedLetter>c</AnimatedLetter>
+          <AnimatedLetter>z</AnimatedLetter>
+          <AnimatedLetter>y</AnimatedLetter>
+          <AnimatedLetter>p</AnimatedLetter>
+          <AnimatedLetter>k</AnimatedLetter>
+          <AnimatedLetter>a</AnimatedLetter>
+        </Suspense>
       </h1>
     </>
+  );
+}
+
+function LoadingLetter() {
+  return (
+    <span
+      className={
+        'hover:text-red-400 duration-700 inline-block text-[4rem] sm:text-[5rem]'
+      }
+    >
+      Szczypka
+    </span>
   );
 }

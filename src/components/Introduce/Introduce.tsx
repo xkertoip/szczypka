@@ -1,10 +1,10 @@
+import { lazy } from 'react';
 import Description from './Description';
 import SectionTitle from '../SectionTitle';
-import dynamic from 'next/dynamic';
 import introduce from '/public/images/rsz_hero.jpg';
 import Image from 'next/image';
 
-const AnimatedImage = dynamic(() => import('./AnimatedImage'));
+const AnimatedImage = lazy(() => import('./AnimatedImage'));
 
 export default function Introduce() {
   return (
@@ -26,7 +26,7 @@ export default function Introduce() {
         <div className={'relative basis-1/3'}>
           <AnimatedImage>
             <div className={'max-w-[50vw] sm:max-w-[350px]'}>
-              <Image src={introduce} alt={'Piotr Szczypka'} />
+              <Image src={introduce} alt={'Piotr Szczypka'} width={350} />
             </div>
           </AnimatedImage>
         </div>

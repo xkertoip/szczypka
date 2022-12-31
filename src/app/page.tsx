@@ -1,13 +1,12 @@
-import Hero from '../components/Hero/Hero';
 /*import Skill from '../components/Skill';
 import Work from '../components/Work';
 import Summary from '../components/Summary';*/
 import Footer from '../components/Footer';
-import dynamic from 'next/dynamic';
-import Experience from '../components/Experience';
+import { lazy } from 'react';
 
-const Introduce = dynamic(() => import('../components/Introduce'));
-/*const Experience = dynamic(() => import('../components/Experience'));*/
+const Hero = lazy(() => import('../components/Hero'));
+const Introduce = lazy(() => import('../components/Introduce'));
+const Experience = lazy(() => import('../components/Experience'));
 
 export default function Home() {
   return (

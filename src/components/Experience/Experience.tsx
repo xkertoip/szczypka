@@ -1,6 +1,5 @@
 import SectionTitle from '../SectionTitle';
 import Workplaces from './Workplaces';
-import { Suspense } from 'react';
 
 export default function Experience() {
   return (
@@ -13,9 +12,7 @@ export default function Experience() {
           align={'right'}
         />
       </div>
-      <Suspense>
-        <Workplaces />
-      </Suspense>
+      <Workplaces />
     </>
   );
 }

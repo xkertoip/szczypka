@@ -20,7 +20,7 @@ export default function Workplace({
           }
         >
           <div className={'space-y-8 relative'}>
-            <div className={'min-h-[4rem] flex justify-center'}>
+            <div className={' flex justify-center'}>
               <Image src={image} alt={'Piotr Szczypka'} />
             </div>
             <div className={'relative'}>
