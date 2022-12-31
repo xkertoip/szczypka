@@ -1,7 +1,7 @@
 'use client';
-
-import Framework from './Framework';
-import Slider from './Slider';
+import { lazy, Suspense } from 'react';
+const Framework = lazy(() => import('./Framework'));
+const Slider = lazy(() => import('./Slider'));
 
 import useGetRandomFramework from '../../utils/useGetRandomFramework';
 import { frameworks } from '../../lib/date';
@@ -28,11 +28,13 @@ export default function Content() {
         }
       >
         <div className={'min-h-[200px] w-full sm:min-h-[300px] relative'}>
-          <Slider
-            name={currentFramework.name}
-            number={currentFramework.uniqueNumber}
-            logo={currentFramework.image}
-          />
+          <Suspense fallback={<Loading />}>
+            <Slider
+              name={currentFramework.name}
+              number={currentFramework.uniqueNumber}
+              logo={currentFramework.image}
+            />
+          </Suspense>
         </div>
       </div>
       <div
@@ -40,8 +42,12 @@ export default function Content() {
           'sm:basis-2/3 flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 relative pt-8 sm:pt-0'
         }
       >
-        {displayFrameworks}
+        <Suspense fallback={<Loading />}>{displayFrameworks}</Suspense>
       </div>
     </>
   );
+}
+
+function Loading() {
+  return <p>Loading...</p>;
 }
