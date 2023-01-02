@@ -1,12 +1,19 @@
-import { useEffect, useState, useCallback, useRef } from 'react';
+import { useEffect, useState, useCallback, useRef, RefObject } from 'react';
+import { useInView } from 'framer-motion';
 
 type Props = {
   array: any[];
   max: number;
+  container: RefObject<HTMLDivElement>;
 };
 
-export default function useGetRandomFramework({ array, max }: Props) {
+export default function useGetRandomFramework({
+  array,
+  max,
+  container
+}: Props) {
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isInView = useInView(container);
   const getRandomFramework = useCallback(() => {
     return array[Math.floor(Math.random() * max)];
   }, [max, array]);
@@ -27,20 +34,24 @@ export default function useGetRandomFramework({ array, max }: Props) {
       timer.current && clearInterval(timer.current);
       timer.current = setInterval(() => {
         handleRandom();
-      }, 4000);
+      }, 3000);
     },
     [findFrameworkByUniqueNumber, handleRandom]
   );
 
   useEffect(() => {
-    timer.current = setInterval(() => {
-      handleRandom();
-    }, 4000);
+    if (!isInView) {
+      return;
+    } else {
+      timer.current = setInterval(() => {
+        handleRandom();
+      }, 3000);
+    }
 
     return () => {
       timer.current && clearInterval(timer.current);
     };
-  }, [handleRandom]);
+  }, [handleRandom, isInView]);
 
   return { currentFramework, handleClick };
 }

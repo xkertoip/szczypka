@@ -10,7 +10,12 @@ const variants = {
     x: 0
   },
   animate: {
-    x: '-100%'
+    x: '-100%',
+    transition: {
+      duration: 5,
+      repeat: Infinity,
+      ease: 'linear'
+    }
   }
 };
 
@@ -59,12 +64,7 @@ export default function InfiniteLoop({ children }: Props) {
               className={'flex w-max'}
               variants={variants}
               initial={'initial'}
-              animate={'animate'}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: 'linear'
-              }}
+              whileInView={'animate'}
             >
               {children}
             </m.div>

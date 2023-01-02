@@ -6,18 +6,42 @@ type Props = {
   children: ReactNode;
 };
 
+const variantsBackground = {
+  hidden: {
+    rotate: -45
+  },
+  visible: {
+    rotate: [-30, -45, -30],
+    transition: {
+      duration: 5,
+      ease: 'easeInOut',
+      repeat: Infinity
+    }
+  }
+};
+const variantsInnerBg = {
+  hidden: {
+    x: -10
+  },
+  visible: {
+    x: [0, -10, 0],
+    transition: {
+      duration: 5,
+      ease: 'easeInOut',
+      repeat: Infinity
+    }
+  }
+};
+
 export default function AnimatedImage({ children }: Props) {
   return (
     <>
       <div className={'my-auto relative h-fit z-[-1]'}>
         <m.div
           className={'main--image__card'}
-          animate={{ rotate: [-30, -45, -30] }}
-          transition={{
-            duration: 5,
-            ease: 'easeInOut',
-            repeat: Infinity
-          }}
+          variants={variantsBackground}
+          initial={'hidden'}
+          whileInView={'visible'}
         />
 
         <div
@@ -28,12 +52,9 @@ export default function AnimatedImage({ children }: Props) {
           <div className={'main--image__background'} />
 
           <m.div
-            animate={{ x: [0, -10, 0] }}
-            transition={{
-              duration: 5,
-              ease: 'easeInOut',
-              repeat: Infinity
-            }}
+            variants={variantsInnerBg}
+            initial={'hidden'}
+            whileInView={'visible'}
           >
             {children}
           </m.div>

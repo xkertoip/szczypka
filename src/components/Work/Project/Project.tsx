@@ -20,7 +20,6 @@ export default function Project({ image, title, technology }: ProjectObject) {
               alt={'Piotr Szczypka'}
               placeholder={'blur'}
               width={450}
-              height={350}
             />
           </Card>
         </Link>

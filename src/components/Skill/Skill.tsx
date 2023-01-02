@@ -10,9 +10,7 @@ export default function Skill() {
         indicatorNumber={4}
         align={'left'}
       />
-      <div className={'pt-8 sm:flex sm:justify-between gap-8 sm:gap-16'}>
-        <Content />
-      </div>
+      <Content />
     </>
   );
 }

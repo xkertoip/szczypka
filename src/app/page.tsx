@@ -11,7 +11,7 @@ const Summary = lazy(() => import('../components/Summary'));
 export default function Home() {
   return (
     <main>
-      <div className={'overflow-x-hidden space-y-16'}>
+      <div className={'overflow-x-hidden space-y-32'}>
         <section
           className={
             'section-container min-h-screen grid md:max-w-[1170px] mx-auto'
