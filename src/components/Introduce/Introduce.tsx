@@ -9,10 +9,10 @@ const AnimatedImage = lazy(() => import('./AnimatedImage'));
 export default function Introduce() {
   return (
     <>
-      <div className={'flex'}>
+      <div className={'relative'}>
         <div
           className={
-            'bg-zinc-800 rounded-r-[3rem] py-8 px-4 sm:px-[10%] border-t border-indigo-400 relative drop-shadow-3xl basis-2/3'
+            'bg-zinc-800 rounded-r-[3rem] py-8 px-4 sm:px-[10%] border-t border-indigo-400 relative drop-shadow-3xl mr-[30%]'
           }
         >
           <SectionTitle
@@ -23,11 +23,13 @@ export default function Introduce() {
           />
           <Description />
         </div>
-        <div className={'relative basis-1/3'}>
+        <div
+          className={
+            'absolute top-0 right-0 w-[100%] max-w-[200px] sm:max-w-[350px] z-[-1]'
+          }
+        >
           <AnimatedImage>
-            <div className={'max-w-[50vw] sm:max-w-[350px]'}>
-              <Image src={introduce} alt={'Piotr Szczypka'} width={350} />
-            </div>
+            <Image src={introduce} alt={'Piotr Szczypka'} width={350} />
           </AnimatedImage>
         </div>
       </div>

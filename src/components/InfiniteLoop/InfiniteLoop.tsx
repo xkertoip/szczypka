@@ -1,6 +1,6 @@
 'use client';
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import { m } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 type Props = {
   children: ReactNode;
 };
@@ -23,6 +23,7 @@ export default function InfiniteLoop({ children }: Props) {
   const [loopElement, setLoopElement] = useState(1);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(outerRef);
 
   function resetAnimation() {
     if (innerRef?.current) {
@@ -64,7 +65,7 @@ export default function InfiniteLoop({ children }: Props) {
               className={'flex w-max'}
               variants={variants}
               initial={'initial'}
-              whileInView={'animate'}
+              animate={isInView ? 'animate' : 'initial'}
             >
               {children}
             </m.div>

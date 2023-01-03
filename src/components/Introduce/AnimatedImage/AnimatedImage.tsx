@@ -24,11 +24,7 @@ const variantsBackground = {
 export default function AnimatedImage({ children }: Props) {
   return (
     <>
-      <div
-        className={
-          'absolute left-0 -top-8  translate-x-[-50%]  rotate-[15deg] z-[-1]'
-        }
-      >
+      <div className={'rotate-[15deg]'}>
         <div className={'relative h-fit z-[-1]'}>
           <m.div
             className={'section--image__card'}
