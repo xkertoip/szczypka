@@ -32,7 +32,7 @@ export default function Contact() {
     <>
       <div
         className={
-          ' flex flex-col md:justify-center gap-8 md:min-h-screen py-8 md:py-16'
+          ' flex flex-col md:justify-center gap-8 md:min-h-screen py-8 md:py-16 overflow-hidden'
         }
       >
         {routes.map(({ slug, name, image }) => (

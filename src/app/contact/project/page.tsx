@@ -1,14 +1,16 @@
-import Stepper from '../../../components/Stepper';
-/*import Step from '../../../components/Step';*/
+import { lazy } from 'react';
+
+const Stepper = lazy(() => import('../../../components/Stepper'));
+const Step = lazy(() => import('../../../components/Step'));
 
 export default function Project() {
   return (
     <>
-      <div className={'flex gap-4 justify-between'}>
+      <div className={'grid'}>
         <Stepper />
-        {/*  <div className={'relative grow flex justify-center'}>
+        <div className={'relative grow flex justify-center pt-8 md:pt-16'}>
           <Step />
-        </div>*/}
+        </div>
       </div>
 
       {/* TODOO: MAIL, SUCCESS MESSAGE */}

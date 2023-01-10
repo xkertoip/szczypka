@@ -3,24 +3,16 @@
 import { useContext } from 'react';
 import { ContactContext } from '../../context/ContactContext';
 import { AnimatePresence, m } from 'framer-motion';
-import { Budget, Subject } from '../StepContent';
-import Mail from '../Mail';
+import { Budget, Subject, Info } from '../StepContent';
 
 const wrapper = {
   in: {
     y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      delay: 1
-    }
+    opacity: 1
   },
   out: {
     y: 50,
-    opacity: 0,
-    transition: {
-      duration: 1
-    }
+    opacity: 0
   }
 };
 
@@ -36,21 +28,24 @@ export default function Step() {
       currentStepContent = <Budget />;
       break;
     case 2:
-      currentStepContent = <Mail />;
+      currentStepContent = <Info />;
       break;
     default:
       break;
   }
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <m.div
           key={currentStep}
           variants={wrapper}
           exit={'out'}
           initial={'out'}
           animate={'in'}
-          className={'absolute mx-auto w-full'}
+          className={'relative m-auto w-full min-h-[550px]'}
+          transition={{
+            y: { duration: 0.5 }
+          }}
         >
           {currentStepContent}
         </m.div>

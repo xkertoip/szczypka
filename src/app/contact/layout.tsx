@@ -7,10 +7,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <main>
       <div
         className={
-          'section-container lg:max-w-[1170px] lg:mx-auto md:flex md:gap-8 md:items-center md:justify-center min-h-screen'
+          'section-container lg:max-w-[1170px] lg:mx-auto md:flex md:gap-8 min-h-screen overflow-hidden'
         }
       >
-        <div className={' flex-1 pt-8 md:pt-0'}>
+        <div className={' md:flex-1 pt-8 md:pt-0 md:m-auto pb-8 md:pb-0'}>
           <SectionTitle
             title={'Contact'}
             indicator={'Leave me a message!'}
@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             align={'left'}
           />
         </div>
-        <div className={'flex-1 pt-8 md:pt-0'}>
+        <div className={'md:flex-1 m-auto'}>
           <Providers>{children}</Providers>
         </div>
       </div>

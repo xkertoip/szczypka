@@ -39,13 +39,11 @@ export default function Hamburger() {
     <m.button
       onClick={changeToggle}
       animate={toggle ? 'open' : 'close'}
-      variants={variantsHamburger}
-      initial={'initial'}
       name={'menu'}
       aria-label={'menu'}
       id={'menu'}
       className={
-        ' fixed w-9 right-0 z-50 h-12 bg-red-400 sm:hover:bg-indigo-400 duration-700 rounded-l-2xl drop-shadow-3xl sm:hover:drop-shadow-4xl'
+        ' fixed w-9 right-0 top-0 z-50 h-12 bg-red-400 sm:hover:bg-indigo-400 rounded-l-2xl drop-shadow-3xl sm:hover:drop-shadow-4xl'
       }
     >
       <div className={'relative w-3 h-6 flex m-auto '}>

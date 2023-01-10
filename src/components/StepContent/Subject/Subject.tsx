@@ -16,7 +16,7 @@ export default function Subject() {
 
   return (
     <>
-      <div className={' grid gap-8'}>
+      <div className={' grid gap-8 text-center'}>
         {subjects.map(({ name, slug }) => (
           <FancyButton key={name} onClick={() => setProjectSubject(slug)}>
             {name}

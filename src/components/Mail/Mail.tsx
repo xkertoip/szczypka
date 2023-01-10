@@ -2,7 +2,7 @@
 
 import { Form, Field, Formik } from 'formik';
 import { useContext, useState } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ContactContext } from '../../context/ContactContext';
 import FancyButton from '../FancyButton';
 
@@ -61,7 +61,7 @@ export default function Mail() {
   };
   return (
     <>
-      <motion.div variants={wrapper}>
+      <m.div variants={wrapper}>
         <Formik
           initialValues={mailInfo}
           onSubmit={values => {
@@ -91,7 +91,7 @@ export default function Mail() {
             </div>
           </Form>
         </Formik>
-      </motion.div>
+      </m.div>
     </>
   );
 }
